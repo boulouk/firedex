@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SCALE - Dashboard</title>
+
+	<!-- Custom defined css file -->
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+	<!-- Icon -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<script type="text/javascript">
+		var server = "127.0.0.1";
+		var port = 8888;
+
+		var webSocket;
+
+		$(document).ready(
+			function() {
+				webSocket = new WebSocket("ws://" + server + ":" + port + "/");
+
+				webSocket.onopen = function() {
+					initialize();
+
+					$(window).on("beforeunload", function() { 
+				    	disconnect();
+					});
+				}
+
+				webSocket.onmessage = function(event) {
+					handleMessage( event.data );
+				}
+
+				$(".subscribe").click(
+					function() {
+						var topic = $(".topic").val();
+						var priority = $(".priority").val();
+
+						if ( topic == "" || priority == "")
+							alert("Insert topic and priority!");
+						else {
+							subscribe(topic, priority);
+							$(".topic").prop("selectedIndex", 0);
+							$(".priority").prop("selectedIndex", 0);
+						}
+					}
+				);
+
+				var topics = [ {text: "Smoke", value: "smoke"}, {text: "Fire", value: "fire"}, {text: "Temperature", value: "temperature"} ];
+				$.each( topics, function(i, element) {
+					$(".topic").append( new Option(element.text, element.value) );
+				});
+				$(".topic").prop("selectedIndex", 0);
+			}
+		);
+
+		var initialize = function() {
+			priorityService();
+		}
+
+		var priorityService = function() {
+			var request = new Object();
+			request.type = "priorityService";
+
+			var priorityMessage = new Object();
+			priorityMessage.message = "Get all priorities";
+			var strPriorityMessage = JSON.stringify(priorityMessage);
+			request.content = strPriorityMessage;
+
+			var requestMessage = new Object();
+			requestMessage.request = request;
+
+			var strMessage = JSON.stringify(requestMessage);
+
+			webSocket.send(strMessage);
+		}
+
+		var subscribe = function(topic, priority) {
+			var request = new Object();
+			request.type = "subscribe";
+
+			var subscribeMessage = new Object();
+			var subscription = new Object();
+			subscription.topic = topic;
+			subscription.priority = priority;
+			subscribeMessage.subscription = subscription;
+			var strSubscribeMessage = JSON.stringify(subscribeMessage);
+			request.content = strSubscribeMessage;
+
+			var requestMessage = new Object();
+			requestMessage.request = request;
+
+			var strMessage = JSON.stringify(requestMessage);
+
+			webSocket.send(strMessage);
+
+			var html = "<tr>"
+				+ "<td class='topicColumn'>" + topic + "</td>"
+				+ "<td class='priorityColumn'>" + priority + "</td>"
+				+ "<td>" + "<input class='delete' type='button' value='Unsubscribe'>" + "</td>"
+				+ "</tr>";
+			$('#topics > tbody:last-child').append(html);
+
+			$('.delete').click(
+				function() {
+					var item = $(this).closest("tr");
+
+					var topic = item.find(".topicColumn").html();
+					var priority = item.find(".priorityColumn").html();
+					unsubscribe(topic, priority);
+
+					item.remove();
+				}
+			);
+		}
+
+		var unsubscribe = function(topic, priority) {
+			var request = new Object();
+			request.type = "unsubscribe";
+
+			var unsubscribeMessage = new Object();
+			var unsubscription = new Object();
+			unsubscription.topic = topic;
+			unsubscription.priority = priority;
+			unsubscribeMessage.unsubscription = unsubscription;
+			var strUnsubscribeMessage = JSON.stringify(unsubscribeMessage);
+			request.content = strUnsubscribeMessage;
+
+			var requestMessage = new Object();
+			requestMessage.request = request;
+
+			var strMessage = JSON.stringify(requestMessage);
+
+			webSocket.send(strMessage);
+		}
+
+		var disconnect = function() {
+			var request = new Object();
+			request.type = "disconnect";
+
+			var disconnectMessage = new Object();
+			disconnectMessage.message = "Disconnect from all connections.";
+			var strDisconnectMessage = JSON.stringify(disconnectMessage);
+			request.content = strDisconnectMessage;
+
+			var requestMessage = new Object();
+			requestMessage.request = request;
+
+			var strMessage = JSON.stringify(requestMessage);
+
+			webSocket.send(strMessage);
+		}
+
+		var handleMessage = function(strMessage) {
+			var object = JSON.parse(strMessage);
+			if ( "priorities" in object ) {
+				var priorities = object.priorities;
+				priorityMessage(priorities);
+			} else if ( "event" in object ) {
+				var event = object.event;
+				eventMessage(event);
+			}
+		}
+
+		var priorityMessage = function(priorities) {
+			$.each( priorities, function(i, element) {
+				$(".priority").append( new Option("Priority: " + element.priorityLevel, element.priorityLevel) );
+			});
+			$(".priority").prop("selectedIndex", 0);
+		}
+
+		var eventMessage = function(event) {
+			var topic = event.topic;
+			var priority = event.priority;
+			var value = event.value;
+			var status = event.status;
+			var time = event.time;
+			var device = event.device;
+			var source = event.source;
+
+			var type = "";
+			if ( priority == 0 )
+				type = "red";
+			else if ( priority == 1 || priority == 2 )
+				type = "yellow";
+			else if ( priority == 3 )
+				type = "green";
+
+			var html = "<tr class='" + type + "''>"
+				+ "<td>" + topic + "</td>"
+				+ "<td>" + priority + "</td>"
+				+ "<td>" + value + "</td>"
+				+ "<td>" + status + "</td>"
+				+ "<td>" + time + "</td>"
+				+ "<td>" + device + "</td>"
+				+ "<td>" + source + "</td>"
+				+ "</tr>";
+			$('#events > tbody:last-child').append(html);
+		}
+
+	</script>
+</head>
+<body>
+
+	<section class="menu">
+		<nav>
+			<span align="center">
+				<div class="title">FireDeX</div>
+			</span>
+			<span align="center">
+				<div class="subtitle">Firedex, a cross-layer middleware that facilitates timely and effective 
+				exchange of data and coordination of emergency response activities. </div>
+			</span>
+
+			<a href="#" class="active">
+				<span align="center">
+					<i class="fas fa-home"></i>
+				</span>
+				Home
+			</a>
+			<a href="#">
+				<span align="center">
+					<i class="fas fa-address-book"></i>
+				</span>
+				Contacts
+			</a>
+			<a href="#">
+				<span align="center">
+					<i class="fas fa-info"></i>
+				</span>
+				Information
+			</a>
+		</nav>
+	</section>
+
+	<header class="header">
+		<span>
+			<div class="headerTitle">Dashboard</div>
+			<div class="headerSubtitle">Welcome to the FireDeX dashboard!</div>
+		</span>
+	</header>
+
+	<section class="content">
+		
+		<section class="main">
+
+			<div class="cards">
+				<div class="leftCard" style="text-align: center;">
+					<table>
+						<tr>
+							<td align="right">
+								<span>Topic</span>
+							</td>
+							<td align="left">
+								<span class="select-style">
+									<select class="topic">
+										<!-- Topics... -->
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>Priority</span>
+							</td>
+							<td align="left">
+								<span class="select-style">
+									<select class="priority">
+										<!-- Topics... -->
+									</select>
+								</span>
+							</td>
+						</tr>
+					</table>
+					<div>
+						<input class="subscribe" type="button" value="Subscribe">
+					</div>
+					</span>
+				</div>
+
+				<div class="rightCard">
+					<section class="filler">
+						<table id="topics" class="table" cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th>Topic</th>
+									<th>Priority</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Subscriptions... -->
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+
+			<div class="events">
+				<section class="filler">
+					<table id="events" class="table" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th>Event</th>
+								<th>Priority</th>
+								<th>Value</th>
+								<th>Status</th>
+								<th>Time</th>
+								<th>Device</th>
+								<th>Source</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Events... -->
+						</tbody>
+					</table>
+				</section>
+			</div>	
+
+		</section>
+	</section>
+
+</body>
+</html>
