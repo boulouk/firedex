@@ -9,7 +9,7 @@ from ryu.ofproto.ofproto_v1_3_parser import OFPBucket
 from ryu.ofproto.ofproto_v1_3_parser import OFPMatch
 
 
-class FiredexController:
+class RyuSdnTopology:
 
     def __init__(self):
         # Topology variables
@@ -150,7 +150,7 @@ class FiredexController:
         self.check_switch_identifier(switch_identifier)
         self.check_packet_type(packet_type)
         self.check_input_port(input_port)
-        # match_paramters: check delegated to the specific match methods
+        # match_parameters: check delegated to the specific match methods
         # ---
 
         switch_datapath = self.from_switch_identifier_to_switch_datapath[switch_identifier]
@@ -186,14 +186,11 @@ class FiredexController:
         ofproto = switch_datapath.ofproto
 
         dl_type = ether_types.ETH_TYPE_ARP
-        dl_src = match_parameters["dl_src"]
-        dl_dst = match_parameters["dl_dst"]
 
         match = parser.OFPMatch(
                                  in_port = input_port,
                                  eth_type = dl_type,
-                                 eth_src = dl_src,
-                                 eth_dst = dl_dst
+                                 ** match_parameters
                                )
         return match
 
@@ -211,15 +208,12 @@ class FiredexController:
 
         dl_type = ether_types.ETH_TYPE_IP
         nw_protocol = in_proto.IPPROTO_ICMP
-        nw_src = match_parameters["nw_src"]
-        nw_dst = match_parameters["nw_dst"]
 
         match = parser.OFPMatch(
                                  in_port = input_port,
                                  eth_type = dl_type,
                                  ip_proto = nw_protocol,
-                                 ipv4_src = nw_src,
-                                 ipv4_dst = nw_dst
+                                 ** match_parameters
                                )
         return match
 
@@ -237,19 +231,12 @@ class FiredexController:
 
         dl_type = ether_types.ETH_TYPE_IP
         nw_protocol = in_proto.IPPROTO_UDP
-        nw_src = match_parameters["nw_src"]
-        nw_dst = match_parameters["nw_dst"]
-        tp_src = match_parameters["tp_src"]
-        tp_dst = match_parameters["tp_dst"]
 
         match = parser.OFPMatch(
                                  in_port = input_port,
                                  eth_type = dl_type,
                                  ip_proto = nw_protocol,
-                                 ipv4_src = nw_src,
-                                 ipv4_dst = nw_dst,
-                                 udp_src = tp_src,
-                                 udp_dst = tp_dst
+                                 ** match_parameters
                                )
         return match
 
@@ -267,19 +254,12 @@ class FiredexController:
 
         dl_type = ether_types.ETH_TYPE_IP
         nw_protocol = in_proto.IPPROTO_TCP
-        nw_src = match_parameters["nw_src"]
-        nw_dst = match_parameters["nw_dst"]
-        tp_src = match_parameters["tp_src"]
-        tp_dst = match_parameters["tp_dst"]
 
         match = parser.OFPMatch(
                                  in_port = input_port,
                                  eth_type = dl_type,
                                  ip_proto = nw_protocol,
-                                 ipv4_src = nw_src,
-                                 ipv4_dst = nw_dst,
-                                 tcp_src = tp_src,
-                                 tcp_dst = tp_dst
+                                 ** match_parameters
                                )
         return match
 
@@ -432,16 +412,68 @@ class FiredexController:
             raise NameError(error_message)
 
     def check_match_parameters_arp(self, match_parameters):
-        pass
+        if "dl_src" in match_parameters.keys():
+            parameter_value = match_parameters["dl_src"]
+            del match_parameters["dl_src"]
+            match_parameters["eth_src"] = parameter_value
+
+        if "dl_dst" in match_parameters.keys():
+            parameter_value = match_parameters["dl_dst"]
+            del match_parameters["dl_dst"]
+            match_parameters["eth_dst"] = parameter_value
 
     def check_match_parameters_icmp(self, match_parameters):
-        pass
+        if "nw_src" in match_parameters.keys():
+            parameter_value = match_parameters["nw_src"]
+            del match_parameters["nw_src"]
+            match_parameters["ipv4_src"] = parameter_value
+
+        if "nw_dst" in match_parameters.keys():
+            parameter_value = match_parameters["nw_dst"]
+            del match_parameters["nw_dst"]
+            match_parameters["ipv4_dst"] = parameter_value
 
     def check_match_parameters_udp(self, match_parameters):
-        pass
+        if "nw_src" in match_parameters.keys():
+            parameter_value = match_parameters["nw_src"]
+            del match_parameters["nw_src"]
+            match_parameters["ipv4_src"] = parameter_value
+
+        if "nw_dst" in match_parameters.keys():
+            parameter_value = match_parameters["nw_dst"]
+            del match_parameters["nw_dst"]
+            match_parameters["ipv4_dst"] = parameter_value
+
+        if "tp_src" in match_parameters.keys():
+            parameter_value = match_parameters["tp_src"]
+            del match_parameters["tp_src"]
+            match_parameters["udp_src"] = parameter_value
+
+        if "tp_dst" in match_parameters.keys():
+            parameter_value = match_parameters["tp_dst"]
+            del match_parameters["tp_dst"]
+            match_parameters["udp_dst"] = parameter_value
 
     def check_match_parameters_tcp(self, match_parameters):
-        pass
+        if "nw_src" in match_parameters.keys():
+            parameter_value = match_parameters["nw_src"]
+            del match_parameters["nw_src"]
+            match_parameters["ipv4_src"] = parameter_value
+
+        if "nw_dst" in match_parameters.keys():
+            parameter_value = match_parameters["nw_dst"]
+            del match_parameters["nw_dst"]
+            match_parameters["ipv4_dst"] = parameter_value
+
+        if "tp_src" in match_parameters.keys():
+            parameter_value = match_parameters["tp_src"]
+            del match_parameters["tp_src"]
+            match_parameters["tcp_src"] = parameter_value
+
+        if "tp_dst" in match_parameters.keys():
+            parameter_value = match_parameters["tp_dst"]
+            del match_parameters["tp_dst"]
+            match_parameters["tcp_dst"] = parameter_value
 
     def check_action_parameter(self, action_parameter):
         if isinstance(action_parameter, basestring):

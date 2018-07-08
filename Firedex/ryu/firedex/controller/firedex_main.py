@@ -1,16 +1,15 @@
 
-import sys as system
 import threading
-
-from ryu.cmd import manager
 
 
 def run_controller(applications):
-    for application in applications:
-        system.argv.append(application)
-    system.argv.append('--observe-links') # enable topology service
-    system.argv.append('--enable-debugger') # enable debugging
-    manager.main()
+    from ryu.cmd import manager
+
+    arguments = []
+    arguments.extend(applications)
+    arguments.append("--observe-links")
+    arguments.append("--enable-debugger")
+    manager.main( args = arguments)
 
 def run_controller_asynchronously(applications):
     controller_thread = threading.Thread(target = run_controller, args = (applications, ))
@@ -19,6 +18,5 @@ def run_controller_asynchronously(applications):
 
 if __name__ == '__main__':
     # run_controller( ["firedex_application"] )
-    # run_controller( ["firedex_application", "simple_test_application"] )
-    run_controller( ["firedex_application", "mininet_test_application"] )
+    run_controller( ["firedex_application", "test_mininet_application"] )
 

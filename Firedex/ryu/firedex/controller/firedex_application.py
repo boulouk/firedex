@@ -14,7 +14,7 @@ from ryu.lib.packet import udp
 from ryu.topology import event, switches
 from ryu.topology.api import get_switch, get_link
 
-from firedex.controller.firedex_controller import FiredexController
+from firedex.controller.ryu_sdn_topology import RyuSdnTopology
 from firedex.controller.naming_utility import *
 
 
@@ -22,7 +22,7 @@ class FiredexApplication(app_manager.RyuApp):
 
     def __init__(self, *args, **kwargs):
         super(FiredexApplication, self).__init__(*args, **kwargs)
-        self.firedex_controller = FiredexController()
+        self.firedex_controller = RyuSdnTopology()
 
     def get_firedex_controller(self):
         return self.firedex_controller
@@ -68,7 +68,10 @@ class FiredexApplication(app_manager.RyuApp):
         ofproto = datapath.ofproto
         parser = datapath.ofproto_parser
 
-        input_port = message.match["in_port"]
+        try:
+            input_port = message.match["in_port"]
+        except:
+            input_port = message["in_port"]
 
         input_packet = packet.Packet(message.data)
 
