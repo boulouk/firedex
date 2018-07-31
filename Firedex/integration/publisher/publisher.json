@@ -1,0 +1,27 @@
+{
+
+	"broker": {
+		"host": "iqueue.ics.uci.edu",
+		"port": "1883"
+	},
+	
+	"publisher": {
+		"identifier": "publisher",
+		"runningTime": "30",
+		"publishings": [
+			{
+				"topic": "smoke",
+				"qualityOfService": "0",
+				"retained": "false",
+				"parameter": "2"
+			},
+			{
+				"topic": "fire",
+				"qualityOfService": "0",
+				"retained": "false",
+				"parameter": "3"
+			}
+		]
+	}
+	
+}

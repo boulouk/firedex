@@ -1,0 +1,3 @@
+port 1883
+websocket_port 8080
+allow_anonymous true
