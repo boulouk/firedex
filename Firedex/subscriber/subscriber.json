@@ -1,0 +1,58 @@
+{
+	"server": {
+		"middleware": {
+			"host": "localhost",
+			"port": 8888
+		},
+		"broker": {
+			"host": "localhost",
+			"port": 20000
+		}
+	},
+	"subscriber": {
+		"identifier": "sub0",
+		"host": "10.0.0.2",
+		"runningTime": 40,
+		"subscriptions": [
+			{
+				"topic": "t0",
+				"time": 0,
+				"utilityFunction": 0.28759254905709963
+			},
+			{
+				"topic": "t2",
+				"time": 0,
+				"utilityFunction": 10.780155936073793
+			},
+			{
+				"topic": "t3",
+				"time": 0,
+				"utilityFunction": 2.571115903251602
+			},
+			{
+				"topic": "t1",
+				"time": 0,
+				"utilityFunction": 0.1695213268274483
+			},
+			{
+				"topic": "t5",
+				"time": 0,
+				"utilityFunction": 1.9870091247754542
+			},
+			{
+				"topic": "t6",
+				"time": 0,
+				"utilityFunction": 1.2946511936284513
+			},
+			{
+				"topic": "t4",
+				"time": 0,
+				"utilityFunction": 4.739246832494637
+			}
+		]
+	},
+	"output": {
+		"logFile": "sub0_log.log",
+		"outputFile": "sub0.json"
+	}
+}

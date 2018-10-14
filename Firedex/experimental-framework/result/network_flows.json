@@ -1,0 +1,1122 @@
+[
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 20.451213855636162, 
+            "port": 10001
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 20.451213855636162
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 18.64855754153032, 
+            "port": 10001
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 18.64855754153032
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 14.184671719407085, 
+            "port": 10001
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 14.184671719407085
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 11.713522734035795, 
+            "port": 10002
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 11.713522734035795
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 11.668378425048484, 
+            "port": 10002
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 11.668378425048484
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 10.66354851658369, 
+            "port": 10001
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 10.66354851658369
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 9.239074739560708, 
+            "port": 10001
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 9.239074739560708
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 8.58231603975488, 
+            "port": 10002
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 8.58231603975488
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 8.461652378014286, 
+            "port": 10001
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 8.461652378014286
+            }
+        ]
+    }, 
+    {
+        "priority": 1, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 8.086484432857388, 
+            "port": 10002
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.0, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 8.086484432857388
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 7.871253064928537, 
+            "port": 10003
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 7.871253064928537
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 7.416280386950104, 
+            "port": 10004
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 7.416280386950104
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 6.607019586979424, 
+            "port": 10003
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 6.607019586979424
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 6.370833600726618, 
+            "port": 10001
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 6.370833600726618
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 6.351997632977625, 
+            "port": 10002
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 6.351997632977625
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 6.336774773981164, 
+            "port": 10004
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 6.336774773981164
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 6.315897178917538, 
+            "port": 10005
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 6.315897178917538
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 5.67495872732637, 
+            "port": 10001
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 5.67495872732637
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 5.6728636943794815, 
+            "port": 10006
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 5.6728636943794815
+            }
+        ]
+    }, 
+    {
+        "priority": 2, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 5.502387831263307, 
+            "port": 10003
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.14383331872283922, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 5.502387831263307
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 5.026290534763772, 
+            "port": 10002
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 5.026290534763772
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 4.770588044847626, 
+            "port": 10001
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 4.770588044847626
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 4.763625736626008, 
+            "port": 10004
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 4.763625736626008
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 4.576542813019127, 
+            "port": 10003
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 4.576542813019127
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 4.248824954706688, 
+            "port": 10004
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 4.248824954706688
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 4.110044731650502, 
+            "port": 10001
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 4.110044731650502
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 3.9015321323995105, 
+            "port": 10002
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 3.9015321323995105
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 3.6540030439477618, 
+            "port": 10002
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 3.6540030439477618
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 3.5563253659910443, 
+            "port": 10003
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 3.5563253659910443
+            }
+        ]
+    }, 
+    {
+        "priority": 3, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 3.5158330485971288, 
+            "port": 10003
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.26697861387085253, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 3.5158330485971288
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 3.3786197336007477, 
+            "port": 10002
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 3.3786197336007477
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 3.313758479711914, 
+            "port": 10002
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 3.313758479711914
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 3.1916778688608654, 
+            "port": 10003
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 3.1916778688608654
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 3.0977571240867268, 
+            "port": 10003
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 3.0977571240867268
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 3.069171526393263, 
+            "port": 10003
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 3.069171526393263
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 2.9393824076043655, 
+            "port": 10004
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 2.9393824076043655
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 2.907316297692728, 
+            "port": 10004
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 2.907316297692728
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 2.787526986831095, 
+            "port": 10004
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 2.787526986831095
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 2.6447009978370777, 
+            "port": 10005
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 2.6447009978370777
+            }
+        ]
+    }, 
+    {
+        "priority": 4, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 2.410897631366574, 
+            "port": 10005
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.3724115125326236, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 2.410897631366574
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 2.398080297739302, 
+            "port": 10003
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 2.398080297739302
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 2.070496892795413, 
+            "port": 10005
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 2.070496892795413
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 1.6544007027522911, 
+            "port": 10004
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 1.6544007027522911
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 1.3323073652164428, 
+            "port": 10005
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 1.3323073652164428
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 1.3267890123958195, 
+            "port": 10004
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 1.3267890123958195
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 1.2683127498654054, 
+            "port": 10005
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 1.2683127498654054
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 1.2195052659473569, 
+            "port": 10005
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 1.2195052659473569
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 1.1773396905846458, 
+            "port": 10006
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 1.1773396905846458
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 1.139646817334306, 
+            "port": 10005
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 1.139646817334306
+            }
+        ]
+    }, 
+    {
+        "priority": 5, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 1.0149240415513894, 
+            "port": 10004
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.4626796474773034, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 1.0149240415513894
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.2", 
+            "utility_function": 0.6687525968985697, 
+            "port": 10007
+        }, 
+        "identifier": "sub0", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 0.6687525968985697
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 0.6370667577855321, 
+            "port": 10006
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 0.6370667577855321
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 0.6200928205064953, 
+            "port": 10006
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 0.6200928205064953
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 0.5785029154558994, 
+            "port": 10006
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 0.5785029154558994
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 0.5585188257250253, 
+            "port": 10006
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 0.5585188257250253
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 0.4870397540084615, 
+            "port": 10006
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 0.4870397540084615
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 0.4509082481099633, 
+            "port": 10005
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 0.4509082481099633
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.10", 
+            "utility_function": 0.3868641709860964, 
+            "port": 10007
+        }, 
+        "identifier": "sub8", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 0.3868641709860964
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.6", 
+            "utility_function": 0.34736678219133554, 
+            "port": 10007
+        }, 
+        "identifier": "sub4", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 0.34736678219133554
+            }
+        ]
+    }, 
+    {
+        "priority": 6, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 0.3438651460505956, 
+            "port": 10006
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.5399642169979687, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 0.3438651460505956
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.9", 
+            "utility_function": 0.32418639458886755, 
+            "port": 10007
+        }, 
+        "identifier": "sub7", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 0.32418639458886755
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.4", 
+            "utility_function": 0.2542548073543257, 
+            "port": 10007
+        }, 
+        "identifier": "sub2", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 0.2542548073543257
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.3", 
+            "utility_function": 0.25214910260322976, 
+            "port": 10007
+        }, 
+        "identifier": "sub1", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic3", 
+                "utility_function": 0.25214910260322976
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 0.24769773769838052, 
+            "port": 10005
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 0.24769773769838052
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.11", 
+            "utility_function": 0.15945689838237267, 
+            "port": 10007
+        }, 
+        "identifier": "sub9", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic1", 
+                "utility_function": 0.15945689838237267
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 0.1507436422117358, 
+            "port": 10006
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic4", 
+                "utility_function": 0.1507436422117358
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.7", 
+            "utility_function": 0.1403444233108438, 
+            "port": 10007
+        }, 
+        "identifier": "sub5", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic6", 
+                "utility_function": 0.1403444233108438
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.8", 
+            "utility_function": 0.0970363909436784, 
+            "port": 10007
+        }, 
+        "identifier": "sub6", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic2", 
+                "utility_function": 0.0970363909436784
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 0.025650280112720605, 
+            "port": 10006
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "utility_function": 0.025650280112720605
+            }
+        ]
+    }, 
+    {
+        "priority": 7, 
+        "network_flow": {
+            "host": "10.0.0.5", 
+            "utility_function": 0.01, 
+            "port": 10007
+        }, 
+        "identifier": "sub3", 
+        "drop_rate": 0.6061326903984108, 
+        "subscriptions": [
+            {
+                "topic": "topic0", 
+                "utility_function": 0.01
+            }
+        ]
+    }
+]
