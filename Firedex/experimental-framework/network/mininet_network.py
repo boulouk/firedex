@@ -72,9 +72,6 @@ class MininetNetwork:
                 topology.addLink(
                     node1 = host["name"],
                     node2 = self.__dummy_switch
-                    # intf = TCIntf,
-                    # params1 = {'delay': str(self.__latency) + "ms"},
-                    # params2 = {'delay': str(self.__latency) + "ms"}
                 )
             elif host["name"].startswith("pub"):
                 topology.addLink(
@@ -84,7 +81,10 @@ class MininetNetwork:
             elif host["name"].startswith("sub"):
                 topology.addLink(
                     node1 = host["name"],
-                    node2 = self.__subscribers_switch
+                    node2 = self.__subscribers_switch,
+                    # intf = TCIntf,
+                    # params1 = {'delay': str(self.__latency) + "ms"},
+                    # params2 = {'delay': str(0) + "ms"}
                 )
 
         self.__network = Mininet(

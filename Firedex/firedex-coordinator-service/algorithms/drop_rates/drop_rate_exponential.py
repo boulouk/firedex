@@ -36,6 +36,7 @@ class DropRateExponential:
 
         network_flows_by_priority = self.__network_flows_by_priority(priorities, network_flows)
 
+        tot = 0
         coefficients = []
         for priority, network_flows_with_priority in sorted(network_flows_by_priority.iteritems(), reverse = True):
             coefficient = 0
@@ -50,6 +51,8 @@ class DropRateExponential:
                         topic_network_load = network_load_by_topic[topic]
 
                     coefficient = coefficient + topic_network_load
+
+                    tot = tot + topic_network_load
 
             coefficients.append(coefficient)
 

@@ -8,6 +8,7 @@ from algorithms.network_flows.network_flow_random import NetworkFlowRandom
 from algorithms.network_flows.network_flow_greedy_split import NetworkFlowGreedySplit
 from algorithms.priorities.priority_random import PriorityRandom
 from algorithms.priorities.priority_greedy_split import PriorityGreedySplit
+from algorithms.priorities.priority_greedy_split_local import PriorityGreedySplitLocal
 from algorithms.drop_rates.drop_rate_flat import DropRateFlat
 from algorithms.drop_rates.drop_rate_linear import DropRateLinear
 from algorithms.drop_rates.drop_rate_exponential import DropRateExponential
@@ -79,6 +80,8 @@ def __priority_algorithm():
         return PriorityRandom()
     if algorithm_name == "greedy_split":
         return PriorityGreedySplit()
+    if algorithm_name == "greedy_split_local":
+        return PriorityGreedySplitLocal()
 
     return None
 

@@ -51,7 +51,7 @@ class ExperimentConfiguration:
             subscriber_count = subscriber_group["count"]
             for i in range(subscriber_count):
                 identifier = subscriber_base_name + str(subscriber_index)
-                running_time = firedex_configuration.experiment_duration() + 180
+                running_time = firedex_configuration.experiment_duration() + 100
                 subscriptions = []
 
                 for type in types:

@@ -118,9 +118,8 @@ def apply_experiment_configuration():
 UDP_OVERHEAD = 42
 MQTT_SN_OVERHEAD = 7
 
-def analytical_experiment():
-    print("--- ANALYTICAL EXPERIMENT ---")
-    print("")
+def theory_experiment():
+    print("--- THEORY EXPERIMENT ---")
 
     grouped_topics = configuration.experiment_configuration.topics()
 
@@ -155,15 +154,14 @@ def analytical_experiment():
         message_size_by_topic[topic] = message_size
 
     bandwidth = configuration.network_configuration.bandwidth()
+    bandwidth = bandwidth / subscribers.__len__()
 
     lambdas = []
     mus = []
 
     for topic in topics:
-        # lambdas.append( float(publication_rate_by_topic[topic]) )
-        # mus.append( float(bandwidth) / float(message_size_by_topic[topic]) )
-        lambdas.append(1.0)
-        mus.append(7.0)
+        lambdas.append( float(publication_rate_by_topic[topic]) )
+        mus.append( float(bandwidth) / float(message_size_by_topic[topic]) )
 
     priorities = configuration.firedex_configuration.priorities()
     success_rate_by_priority = {}
@@ -183,12 +181,23 @@ def analytical_experiment():
 
     error_rate = float( configuration.network_configuration.error_rate() )
     theory_input = {
-        "buffer_use": "True",
+        "duration": "30000",
+        "completions": "-1",
+        "broker_in_rate": "6400000",
+        "broker_out_rate": "6400000",
+        "sdn_in_rate": "6400000",
+        "sdn_out_buffer": "2048",
+        "broker_in_serv": "Det",
+        "broker_out_serv": "Det",
+        "sdn_in_serv": "Det",
+        "sdn_out_serv": "Det",
         "error_rate": error_rate,
         "lambdas": lambdas,
         "mus": mus,
         "prio_probs": success_rates
     }
+
+    result_file = open("./result/aggregate_theory.csv", "w")
 
     for subscriber in subscribers:
         subscriber = subscriber["subscriber"]
@@ -213,19 +222,38 @@ def analytical_experiment():
         theory_input["subscriptions"] = subscriptions
         theory_input["priorities"] = priorities
 
-        file = open("./result/theory/configuration.json", "w")
+        file = open("./theory/configuration.json", "w")
         file.write( json.dumps(theory_input, indent = 4) )
         file.close()
 
-        command = "./result/theory/pubsub-prio.jar"
+        jar_file = "./theory/pubsub-prio.jar"
+        configuration_file = "./theory/configuration.json"
+        output_file = "./theory/output_theory.json"
+        command = "java -cp %s pubsubpriorities.PubsubV9Sim %s %s" % (jar_file, configuration_file, output_file)
 
-        process = subprocess.Popen("java -jar ./theory/pubsub-prio.jar ./theory/configuration.json ./theory/output_theory.json", shell=True)
+        process = subprocess.Popen(command,
+                                   shell = True,
+                                   # stdin = open(os.devnull),
+                                   # stdout = open(os.devnull),
+                                   # stderr = open(os.devnull)
+                                  )
         process.wait()
-        print("ok")
 
-def simulation_experiment():
-    print("--- SIMULATION EXPERIMENT ---")
-    print("")
+        output_theory = open(output_file, "r").read().splitlines()
+        for topic_index, priority, output_theory_line in zip(subscriptions, priorities, output_theory):
+            topic = topics[topic_index]
+
+            values = output_theory_line.split(",")
+            success_rate = float(values[1])
+            latency_analytical = float(values[2]) * 1000
+            latency_simulation = float(values[0]) * 1000
+
+            aggregate_line = "%s, %s, %d, %f, %f, %f" % (identifier, topic, priority, success_rate, latency_analytical, latency_simulation)
+            result_file.write(aggregate_line)
+            result_file.write(os.linesep)
+
+    result_file.close()
+    print("Theory experiment completed.")
 
 def start_network():
     print("Starting network...")
@@ -355,7 +383,7 @@ def wait():
     experiment_duration = configuration.firedex_configuration.experiment_duration()
     print("Experiment started.")
 
-    to = experiment_duration + 180
+    to = experiment_duration + 100
     for i in range(1, to + 1):
         time.sleep(1)
         print(str(i) + " ---> " + str(to))
@@ -496,9 +524,9 @@ if __name__ == "__main__":
 
     run = RUN
 
-    if "analytical" in run:
-        analytical_experiment()
-    if "simulation" in run:
-        simulation_experiment()
+    if "theory" in run:
+        theory_experiment()
+        print("")
+
     if "physical" in run:
         physical_experiment()

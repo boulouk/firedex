@@ -18,7 +18,8 @@ SUBSCRIBER = {
         {
             "count": 10,
             "deterministic": {
-                "count": 0
+                "count": 0,
+                "utility_function": { "average": 5, "lower_bound": 0.01, "upper_bound": 100 }
             },
             "random": {
                 "count": 7,
@@ -35,7 +36,9 @@ PUBLISHER = {
             "count": 1,
 
             "deterministic": {
-                "count": 0
+                "count": 0,
+                "rate": { "average": 10, "lower_bound": 10, "upper_bound": 10 },
+                "size": { "average": 51, "lower_bound": 51, "upper_bound": 51 }
             },
             "random": {
                 "count": 7,
