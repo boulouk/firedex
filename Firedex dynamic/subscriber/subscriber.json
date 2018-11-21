@@ -1,0 +1,32 @@
+{
+	"server": {
+		"middleware": {
+			"host": "localhost",
+			"port": 8888
+		},
+		"broker": {
+			"host": "localhost",
+			"port": 20000
+		},
+		"web": {
+			"abilitate": true,
+			"port": 5000
+		}
+	},
+	"subscriber": {
+		"identifier": "subscriber",
+		"host": "10.0.0.2",
+		"startAfter": 1,
+		"runningTime": 1000,
+		"subscriptions": [
+		],
+		"modifications": [
+		],
+		"unsubscriptions": [
+		]
+	},
+	"output": {
+		"logFile": "subscriber_log.log",
+		"outputFile": "subscriber.json"
+	}
+}

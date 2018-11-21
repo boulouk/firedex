@@ -1,0 +1,60 @@
+{
+    "subscriber": {
+        "modifications": [], 
+        "subscriptions": [
+            {
+                "topic": "topic5", 
+                "time": 0.0, 
+                "utilityFunction": 5
+            }, 
+            {
+                "topic": "topic2", 
+                "time": 0.0, 
+                "utilityFunction": 5
+            }, 
+            {
+                "topic": "topic6", 
+                "time": 0.0, 
+                "utilityFunction": 7.096292973602695
+            }, 
+            {
+                "topic": "topic4", 
+                "time": 0.0, 
+                "utilityFunction": 5
+            }, 
+            {
+                "topic": "topic1", 
+                "time": 0.0, 
+                "utilityFunction": 10
+            }, 
+            {
+                "topic": "topic3", 
+                "time": 0.0, 
+                "utilityFunction": 10
+            }
+        ], 
+        "startAfter": 0, 
+        "runningTime": 3780, 
+        "host": "10.0.0.2", 
+        "unsubscriptions": [], 
+        "identifier": "sub1"
+    }, 
+    "output": {
+        "outputFile": "./result/output/sub1_output.json", 
+        "logFile": "./result/log/sub1_log.log"
+    }, 
+    "server": {
+        "web": {
+            "abilitate": true, 
+            "port": 5000
+        }, 
+        "middleware": {
+            "host": "10.0.2.15", 
+            "port": "8888"
+        }, 
+        "broker": {
+            "host": "10.0.0.1", 
+            "port": 20000
+        }
+    }
+}

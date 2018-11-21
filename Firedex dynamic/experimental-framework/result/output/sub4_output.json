@@ -1,0 +1,100 @@
+{
+  "configuration": {
+    "server": {
+      "middleware": {
+        "host": "10.0.2.15",
+        "port": 8888
+      },
+      "broker": {
+        "host": "10.0.0.1",
+        "port": 20000
+      },
+      "web": {
+        "abilitate": true,
+        "port": 5000
+      }
+    },
+    "subscriber": {
+      "identifier": "sub4",
+      "host": "10.0.0.5",
+      "startAfter": 0,
+      "runningTime": 480,
+      "subscriptions": [
+        {
+          "topic": "topic5",
+          "utilityFunction": 8.019064165096287,
+          "time": 0
+        },
+        {
+          "topic": "topic1",
+          "utilityFunction": 6.364166176682023,
+          "time": 0
+        },
+        {
+          "topic": "topic3",
+          "utilityFunction": 5.0,
+          "time": 0
+        },
+        {
+          "topic": "topic6",
+          "utilityFunction": 5.0,
+          "time": 0
+        },
+        {
+          "topic": "topic4",
+          "utilityFunction": 5.0,
+          "time": 0
+        },
+        {
+          "topic": "topic2",
+          "utilityFunction": 5.0,
+          "time": 0
+        }
+      ],
+      "modifications": [],
+      "unsubscriptions": []
+    },
+    "output": {
+      "logFile": "./result/log/sub4_log.log",
+      "outputFile": "./result/output/sub4_output.json"
+    }
+  },
+  "subscriptionsResult": [
+    {
+      "topic": "topic1",
+      "port": 10001,
+      "messages": 2347,
+      "latency": 24.94162760971453
+    },
+    {
+      "topic": "topic2",
+      "port": 10003,
+      "messages": 1452,
+      "latency": 97.23209366391184
+    },
+    {
+      "topic": "topic5",
+      "port": 10001,
+      "messages": 2237,
+      "latency": 26.04738489047832
+    },
+    {
+      "topic": "topic6",
+      "port": 10002,
+      "messages": 1400,
+      "latency": 101.66142857142857
+    },
+    {
+      "topic": "topic3",
+      "port": 10002,
+      "messages": 1438,
+      "latency": 111.95271210013908
+    },
+    {
+      "topic": "topic4",
+      "port": 10003,
+      "messages": 1453,
+      "latency": 102.32278045423263
+    }
+  ]
+}

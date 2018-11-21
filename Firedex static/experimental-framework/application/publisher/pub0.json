@@ -1,0 +1,73 @@
+{
+    "publisher": {
+        "runningTime": 300, 
+        "host": "10.0.0.12", 
+        "identifier": "pub0", 
+        "publications": [
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic6", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic2", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic5", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic4", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic0", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic3", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic1", 
+                "messageSize": 51, 
+                "rate": 10
+            }
+        ]
+    }, 
+    "broker": {
+        "host": "10.0.0.1", 
+        "port": 1883
+    }, 
+    "output": {
+        "outputFile": "./result/output/pub0_output.json", 
+        "logFile": "./result/log/pub0_log.log"
+    }
+}

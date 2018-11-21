@@ -1,0 +1,29 @@
+{
+
+	"broker": {
+		"host": "iqueue.ics.uci.edu",
+		"port": 1883
+	},
+	
+	"publisher": {
+		"identifier": "publisher",
+		"host": "10.0.0.2",
+		"runningTime": 30,
+		"publications": [
+			{
+				"topic": "smoke",
+				"rateType": "deterministic",
+				"rate": 10,
+				"messageSize": 100,
+				"qualityOfService": 0,
+				"retained": false
+			}
+		]
+	},
+	
+	"output": {
+		"logFile": "publisher_log.log",
+		"outputFile": "publisher_output.json"
+	}
+	
+}

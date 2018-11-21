@@ -1,0 +1,100 @@
+{
+  "configuration": {
+    "server": {
+      "middleware": {
+        "host": "10.0.2.15",
+        "port": 8888
+      },
+      "broker": {
+        "host": "10.0.0.1",
+        "port": 1883
+      }
+    },
+    "publisher": {
+      "identifier": "pub1",
+      "host": "10.0.0.7",
+      "startAfter": 60,
+      "runningTime": 300,
+      "publications": [
+        {
+          "topic": "topic3",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        },
+        {
+          "topic": "topic2",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        },
+        {
+          "topic": "topic4",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        },
+        {
+          "topic": "topic5",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        },
+        {
+          "topic": "topic6",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        },
+        {
+          "topic": "topic1",
+          "rateType": "random",
+          "rate": 10.0,
+          "messageSize": 51,
+          "qualityOfService": 0,
+          "retained": false
+        }
+      ]
+    },
+    "output": {
+      "logFile": "./result/log/pub1_log.log",
+      "outputFile": "./result/output/pub1_output.json"
+    }
+  },
+  "publicationsResult": [
+    {
+      "topic": "topic1",
+      "messages": 3022
+    },
+    {
+      "topic": "topic2",
+      "messages": 2931
+    },
+    {
+      "topic": "topic5",
+      "messages": 3051
+    },
+    {
+      "topic": "topic6",
+      "messages": 2912
+    },
+    {
+      "topic": "topic3",
+      "messages": 2916
+    },
+    {
+      "topic": "topic4",
+      "messages": 2947
+    }
+  ]
+}

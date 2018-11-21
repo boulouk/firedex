@@ -1,0 +1,72 @@
+{
+    "publisher": {
+        "startAfter": 60, 
+        "runningTime": 3600, 
+        "host": "10.0.0.7", 
+        "identifier": "pub1", 
+        "publications": [
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic5", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic4", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic3", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic1", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic6", 
+                "messageSize": 51, 
+                "rate": 10
+            }, 
+            {
+                "retained": false, 
+                "qualityOfService": 0, 
+                "rateType": "random", 
+                "topic": "topic2", 
+                "messageSize": 51, 
+                "rate": 10
+            }
+        ]
+    }, 
+    "output": {
+        "outputFile": "./result/output/pub1_output.json", 
+        "logFile": "./result/log/pub1_log.log"
+    }, 
+    "server": {
+        "middleware": {
+            "host": "10.0.2.15", 
+            "port": "8888"
+        }, 
+        "broker": {
+            "host": "10.0.0.1", 
+            "port": 1883
+        }
+    }
+}

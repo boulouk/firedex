@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>FireDeX</title>
+
+	<meta charset="utf-8">
+
+	<!-- Responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+	<!-- Custom defined css file -->
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+	<!-- Icon -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Chart -->
+	<script type="text/javascript" src="http://www.chartjs.org/dist/master/Chart.min.js"></script>
+	<script type="text/javascript" src="javascript/chart.js"></script>
+
+	<!-- User events -->
+	<script type="text/javascript" src="javascript/user-events.js"></script>
+</head>
+<body>
+
+	<header class="header">
+		<span align="center">
+			<div class="header_title">FireDeX dashboard</div>
+		<span>
+	</header>
+
+	<section class="content">
+
+		<section class="content-subscription">
+			<div class="cards">
+				<div class="card-subscribe" style="text-align:center">
+					<div>
+						<label for="text-topic">Topic</label>
+						<input type="text" id="text-topic" placeholder="">
+					</div>
+
+					<br>
+
+					<div>
+						<label for="text-utility-function">Utility</label>
+  					<input type="text" id="text-utility-function" placeholder="">
+					</div>
+
+					<br>
+
+					<div>
+						<input class="subscribe" type="button" value="Subscribe">
+					</div>
+				</div>
+
+				<div class="card-subscription">
+					<section class="filler">
+						<table id="topics" class="table" cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th>Topic</th>
+									<th>Utility</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Subscriptions... -->
+								<tr>
+
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<section class="content-graph-description">
+			<span align="center">
+				<div id="averageLatency">Average latency: 0.</div>
+				<div id="averageMessages">Average messages: 0.</div>
+				<div id="maximumMessages">Maximum messages: 0.</div>
+			</span>
+		</section>
+
+		<section class="content-show">
+			<section id="section-graph" class="filler">
+				<div class="chart-container">
+					<canvas id="chart-bandwidth" width="100%" height="100%"></canvas>
+				</div>
+			</section>
+		</section>
+
+	</section>
+</body>
+</html>

@@ -1,0 +1,185 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: black;
+	width: 100%;
+	height: 100%;
+	background: #F4F6F9;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	margin: 0px;
+}
+
+.header {
+	background-color: #302D43;
+}
+
+header .header_title {
+	color: #F4F6F9;
+	font-size: 16pt;
+	padding: 15px;
+}
+
+.content-subscription {
+	margin: 15px;
+}
+
+.content-graph-description {
+	margin: 15px;
+}
+
+.content-show {
+	height: 250px;
+	margin: 15px;
+}
+
+.cards {
+	display: flex;
+	height: 210px;
+}
+
+.card-subscribe {
+	flex: 1;
+	margin-right: 10px;
+	padding: 20px;
+	background: #FFFFFF;
+}
+
+.card-subscription {
+	flex: 1;
+	margin-left: 10px;
+	padding: 20px;
+	background: #FFFFFF;
+}
+
+input[type="text"] {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+	margin-left: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.subscribe {
+	background-position: center;
+	transition: background 0.8s;
+	margin-top: 7px;
+	border: none;
+	border-radius: 2px;
+	padding: 12px 18px;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: #EAEDF3;
+	box-shadow: 0 0 4px #999;
+	outline: none;
+}
+
+.delete {
+	background-position: center;
+	transition: background 0.8s;
+	border: none;
+	border-radius: 2px;
+	padding: 5px 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: #EAEDF3;
+	box-shadow: 0 0 4px #999;
+	outline: none;
+}
+
+.option {
+	background-position: center;
+	transition: background 0.8s;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+	width: 100px;
+	cursor: pointer;
+	background-color: #EAEDF3;
+	box-shadow: 0 0 4px #999;
+	outline: none;
+}
+
+input[type="button"]:hover {
+	background: #92CF48 radial-gradient(circle, transparent 1%, #92CF48 1%) center/15000%;
+}
+
+input[type="button"]:active {
+	background-color: #EAEDF3;
+	background-size: 100%;
+	transition: background 0s;
+}
+
+.filler {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+table {
+	width: 100%;
+}
+
+.table thead {
+	background: #EAEDF3;
+}
+
+.table thead th {
+	font-size: 12pt;
+	padding: 10px;
+	text-align: left;
+	color: #1B1B1B;
+}
+
+.table tbody {
+	background: #FFFFFF;
+	font-size: 10pt;
+}
+
+.table tbody td {
+	padding: 10px;
+	text-align: left;
+	color: #1B1B1B;
+}
+
+.chart-container {
+	height: 250px;
+}
+
+@media only screen and (max-width: 720px) {
+	.cards {
+		display: block;
+		height: 450px;
+	}
+
+	.card-subscribe {
+		margin-right: 0px;
+		padding: 20px;
+		background: #FFFFFF;
+		height: 210px;
+	}
+
+	.card-subscription {
+		margin-top: 10px;
+		margin-left: 0px;
+		padding: 20px;
+		background: #FFFFFF;
+		height: 230px;
+	}
+}

@@ -1,0 +1,14 @@
+
+Bandwidth: 250 KB
+
+Subscribers: 30
+Publishers: 1
+
+Network flows: 7
+Priorities: 7
+
+Network flow algorithm: greedy_split
+Priority algorithm: greedy_split
+Drop rate algorithm: exponential
+
+Tolerance: 0.1

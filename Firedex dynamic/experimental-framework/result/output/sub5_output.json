@@ -1,0 +1,39 @@
+{
+  "configuration": {
+    "server": {
+      "middleware": {
+        "host": "10.0.2.15",
+        "port": 8888
+      },
+      "broker": {
+        "host": "10.0.0.1",
+        "port": 20000
+      },
+      "web": {
+        "abilitate": true,
+        "port": 5000
+      }
+    },
+    "subscriber": {
+      "identifier": "sub5",
+      "host": "10.0.0.6",
+      "startAfter": 0,
+      "runningTime": 480,
+      "subscriptions": [],
+      "modifications": [],
+      "unsubscriptions": []
+    },
+    "output": {
+      "logFile": "./result/log/sub5_log.log",
+      "outputFile": "./result/output/sub5_output.json"
+    }
+  },
+  "subscriptionsResult": [
+    {
+      "topic": "topic1",
+      "port": 10001,
+      "messages": 1079,
+      "latency": 40.34105653382762
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "server": {
+    "middleware": {
+      "host": "localhost",
+      "port": 8888
+    },
+    "broker": {
+      "host": "iqueue.ics.uci.edu",
+      "port": 8883
+    }
+  },	
+  "publisher": {
+    "identifier": "publisher",
+    "host": "10.0.0.2",
+    "startAfter": 10,
+    "runningTime": 30,
+    "publications": [
+      {
+        "topic": "smoke",
+        "rateType": "random",
+        "rate": 0.5,
+				"messageSize": 100,
+				"qualityOfService": 0,
+				"retained": false
+			},
+			{
+				"topic": "fire",
+				"rateType": "random",
+				"rate": 1,
+				"messageSize": 100,
+				"qualityOfService": 0,
+				"retained": false
+			},
+			{
+				"topic": "temperature",
+				"rateType": "random",
+				"rate": 2,
+				"messageSize": 100,
+				"qualityOfService": 0,
+				"retained": false
+			}
+		]
+	},
+	
+	"output": {
+		"logFile": "publisher_log.log",
+		"outputFile": "publisher_output.json"
+	}
+	
+}

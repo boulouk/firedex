@@ -1,0 +1,100 @@
+{
+  "configuration": {
+    "server": {
+      "middleware": {
+        "host": "10.0.2.15",
+        "port": 8888
+      },
+      "broker": {
+        "host": "10.0.0.1",
+        "port": 20000
+      },
+      "web": {
+        "abilitate": true,
+        "port": 5000
+      }
+    },
+    "subscriber": {
+      "identifier": "sub2",
+      "host": "10.0.0.3",
+      "startAfter": 0,
+      "runningTime": 480,
+      "subscriptions": [
+        {
+          "topic": "topic6",
+          "utilityFunction": 10.0,
+          "time": 0
+        },
+        {
+          "topic": "topic3",
+          "utilityFunction": 10.0,
+          "time": 0
+        },
+        {
+          "topic": "topic4",
+          "utilityFunction": 5.504016932954539,
+          "time": 0
+        },
+        {
+          "topic": "topic2",
+          "utilityFunction": 6.918058080857999,
+          "time": 0
+        },
+        {
+          "topic": "topic1",
+          "utilityFunction": 5.0,
+          "time": 0
+        },
+        {
+          "topic": "topic5",
+          "utilityFunction": 5.383635806213253,
+          "time": 0
+        }
+      ],
+      "modifications": [],
+      "unsubscriptions": []
+    },
+    "output": {
+      "logFile": "./result/log/sub2_log.log",
+      "outputFile": "./result/output/sub2_output.json"
+    }
+  },
+  "subscriptionsResult": [
+    {
+      "topic": "topic1",
+      "port": 10003,
+      "messages": 2161,
+      "latency": 31.378528459046738
+    },
+    {
+      "topic": "topic2",
+      "port": 10002,
+      "messages": 2098,
+      "latency": 28.300762631077216
+    },
+    {
+      "topic": "topic5",
+      "port": 10003,
+      "messages": 2021,
+      "latency": 33.16229589312222
+    },
+    {
+      "topic": "topic6",
+      "port": 10001,
+      "messages": 2868,
+      "latency": 7.8343793584379355
+    },
+    {
+      "topic": "topic3",
+      "port": 10001,
+      "messages": 2919,
+      "latency": 8.583418979102433
+    },
+    {
+      "topic": "topic4",
+      "port": 10002,
+      "messages": 2080,
+      "latency": 30.744711538461537
+    }
+  ]
+}

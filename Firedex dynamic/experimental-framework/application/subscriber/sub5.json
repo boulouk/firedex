@@ -1,0 +1,29 @@
+{
+    "subscriber": {
+        "modifications": [], 
+        "subscriptions": [], 
+        "startAfter": 0, 
+        "runningTime": 3780, 
+        "host": "10.0.0.6", 
+        "unsubscriptions": [], 
+        "identifier": "sub5"
+    }, 
+    "output": {
+        "outputFile": "./result/output/sub5_output.json", 
+        "logFile": "./result/log/sub5_log.log"
+    }, 
+    "server": {
+        "web": {
+            "abilitate": true, 
+            "port": 5000
+        }, 
+        "middleware": {
+            "host": "10.0.2.15", 
+            "port": "8888"
+        }, 
+        "broker": {
+            "host": "10.0.0.1", 
+            "port": 20000
+        }
+    }
+}
