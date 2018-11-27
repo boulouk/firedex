@@ -12,10 +12,10 @@ These instructions will get you a copy of the FireDeX project up and running on 
 ## Prerequisites
 
 Install [VirtualBox](https://www.virtualbox.org/).  
-Install Ubuntu 14.04.
+Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 
 ## Installing - Alternative 1
-These steps will walk you trough the installation of the FireDeX project from scratch (i.e. clean Ubuntu Virtual Machine).  
+These steps will walk you trough the installation of the FireDeX project from scratch (clean Ubuntu Virtual Machine).  
 
 We will need to install:
 - Java
@@ -83,8 +83,8 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 - firedex-coordinator-service
 
 Import the following dependencies:
-- experimental-framework -> numpy, requests, matplotlib (add the Mininet project as a dependency)
-- sdn-controller -> ryu (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
+- experimental-framework -> numpy, requests, matplotlib, pandas (add the Mininet project as a dependency)
+- sdn-controller -> ryu, decorator (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
 - firedex-coordinator-service -> flask, numpy, requests
 
 #### FireDeX dynamic dependencies
@@ -95,9 +95,9 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 - firedex-coordinator-service
 
 Import the following dependencies:
-- experimental-framework ->
-- sdn-controller ->
-- firedex-coordinator-service ->
+- experimental-framework -> numpy, requests (add the Mininet project as a dependency)
+- sdn-controller -> ryu, decorator (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
+- firedex-coordinator-service -> flask, numpy, cvxpy, requests
 
 ## Installing - Alternative 2
 Download the FireDeX repository and the [FireDeX Virtual Machine](xxx). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
@@ -107,12 +107,29 @@ username = firedex
 password = firedex
 
 ## Running - FireDeX static
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-static_ directory:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the directory _firedex-static_:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
 
-The default configuration 
+The default configuration runs 10 subscribers with ρ = 1.5 (network load).
+
+![Response time](https://github.com/boulouk/firedex/blob/master/documentation/static-response-time.png)
+![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/static-success-rate.png)
+
+The configuration parameters are in the directory _scenario_ of the experimental-framework project:
+- experiment_scenario.py
+  - _RUN_ defines the type of experiment to run (analytical model, Mininet simulation, both)
+- firedex_scenario.py
+  - _EXPERIMENT_DURATION_ sets the duration of the experiment
+  - _NETWORK_FLOWS_ and _PRIORITIES_ allow to set respectively the number of network flows and the number of priorities
+  - _NETWORK_FLOW_ALGORITHM_, _PRIORITY_ALGORITHM_ and _DROP_RATE_ALGORITHM_ apply the various FireDeX algorithms
+  - _TOLERANCE_ represents the percentage of bandwidth reserved for temporary traffic peaks
+- network_scenario.py
+  - _BANDWIDTH_ defines the available bandwidth between broker and subscribers
+- topology_scenario.py
+  - _SUBSCRIBER_ allows to modify the number of subscribers and their subscriptions (topic and utility function)
+  - _PUBLISHER_ allows to modify the number of publishers and their publications (topic, publication rate and message size)
 
 Note: run the applications in the following order:
 - firedex-coordinator-service
@@ -125,5 +142,16 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 - sdn-controller
 - firedex-coordinator-service
 
-## Authors
-List of authors.
+The default configuration runs 5 subscribers with ρ = 1.2 (network load).
+
+![Response time](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-response-time.png)
+![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-success-rate.png)
+
+The configuration parameters are in the directory _scenario_ of the experimental-framework project:
+- asd
+  - asd asd
+
+Note: run the applications in the following order:
+- firedex-coordinator-service
+- sdn-controller
+- experimental-framework
