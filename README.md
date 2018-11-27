@@ -84,7 +84,7 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 
 Import the following dependencies:
 - experimental-framework -> numpy, requests, matplotlib, pandas (add the Mininet project as a dependency)
-- sdn-controller -> ryu (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
+- sdn-controller -> ryu, decorator (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
 - firedex-coordinator-service -> flask, numpy, requests
 
 #### FireDeX dynamic dependencies
@@ -96,8 +96,8 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 
 Import the following dependencies:
 - experimental-framework -> numpy, requests (add the Mininet project as a dependency)
-- sdn-controller -> ryu (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
-- firedex-coordinator-service -> flask, numpy, requests
+- sdn-controller -> ryu, decorator (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
+- firedex-coordinator-service -> flask, numpy, cvxpy, requests
 
 ## Installing - Alternative 2
 Download the FireDeX repository and the [FireDeX Virtual Machine](xxx). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
@@ -142,7 +142,14 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 - sdn-controller
 - firedex-coordinator-service
 
-Default configuration
+The default configuration runs 5 subscribers with ρ = 1.2 (network load).
+
+![Response time](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-response-time.png)
+![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-success-rate.png)
+
+The configuration parameters are in the directory _scenario_ of the experimental-framework project:
+- asd
+  - asd asd
 
 Note: run the applications in the following order:
 - firedex-coordinator-service
