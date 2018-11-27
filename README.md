@@ -2,9 +2,7 @@
 
 FireDeX is a cross-layer middleware that facilitates timely and effective exchange of data for coordinating emergency response activities. Emergency scenarios may challenge/congest the network infrastructure. FireDeX addresses these situations by prioritizing event delivery and by dropping some low priority events. It adopts a publish-subscribe data exchange paradigm with brokers at the network edge to manage prioritized delivery of mission-critical data from IoT sources to relevant subscribers.
 
-See also the following resources for more details on the FireDeX middleware:
-- https://www.ics.uci.edu/~dsm/papers/2018/firedex-middleware.pdf
-- https://www.ics.uci.edu/~dsm/papers/2018/firedex-poster-abstract.pdf
+See [1,2] for more details on the FireDeX middleware.
 
 ## Getting started
 These instructions will get you a copy of the FireDeX project up and running on your local machine. 
@@ -169,3 +167,7 @@ Note: run the applications in the following order:
 - firedex-coordinator-service
 - sdn-controller
 - experimental-framework
+
+
+[1] https://hal.inria.fr/hal-01877555
+[2] https://hal.inria.fr/hal-01895274
