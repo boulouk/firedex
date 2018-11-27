@@ -1,6 +1,6 @@
 # Firedex
 
-Description of FireDeX.
+FireDeX is a cross-layer middleware that facilitates timely and effective exchange of data for coordinating emergency response activities. Emergency scenarios may challenge/congest the network infrastructure. FireDeX addresses these situations by prioritizing event delivery and by dropping some low priority events. It adopts a publish-subscribe data exchange paradigm with brokers at the network edge to manage prioritized delivery of mission-critical data from IoT sources to relevant subscribers.
 
 See also the following resources for more details on FireDeX:
 - https://www.ics.uci.edu/~dsm/papers/2018/firedex-middleware.pdf
@@ -144,12 +144,19 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 
 The default configuration runs 5 subscribers with ρ = 1.2 (network load).
 
-![Response time](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-response-time.png)
-![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/dynamic-success-rate.png)
+![Dashboard example](https://github.com/boulouk/firedex/blob/master/documentation/dashboard.png)
 
 The configuration parameters are in the directory _scenario_ of the experimental-framework project:
-- asd
-  - asd asd
+- experiment_scenario.py
+  - _EXPERIMENT_DURATION_ sets the duration of the experiment
+  - _SUBSCRIBER_ allows to modify the number of subscribers and their subscriptions (topic and utility function)
+  - _PUBLISHER_ allows to modify the number of publishers and their publications (topic, publication rate and message size)
+- firedex_scenario.py
+  - _NETWORK_FLOWS_ and _PRIORITIES_ allow to set respectively the number of network flows and the number of priorities
+  - _NETWORK_FLOW_ALGORITHM_, _PRIORITY_ALGORITHM_ and _DROP_RATE_ALGORITHM_ apply the various FireDeX algorithms
+  - _TOLERANCE_ represents the percentage of bandwidth reserved for temporary traffic peaks
+- network_scenario.py
+  - _BANDWIDTH_ defines the available bandwidth between broker and subscribers  
 
 Note: run the applications in the following order:
 - firedex-coordinator-service
