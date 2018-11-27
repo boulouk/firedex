@@ -137,14 +137,15 @@ Note: run the applications in the following order:
 - experimental-framework
 
 ## Running - FireDeX dynamic
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-static_ directory:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-dynamic_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
 
 The default configuration runs 5 subscribers with ρ = 1.2 (network load).
 
-![Dashboard example](https://github.com/boulouk/firedex/blob/master/documentation/dashboard.png)
+![High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
+![Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
 
 The configuration parameters are in the directory _scenario_ of the experimental-framework project:
 - experiment_scenario.py
@@ -154,7 +155,7 @@ The configuration parameters are in the directory _scenario_ of the experimental
 - firedex_scenario.py
   - _NETWORK_FLOWS_ and _PRIORITIES_ allow to set respectively the number of network flows and the number of priorities
   - _NETWORK_FLOW_ALGORITHM_, _PRIORITY_ALGORITHM_ and _DROP_RATE_ALGORITHM_ apply the various FireDeX algorithms
-  - _TOLERANCE_ represents the percentage of bandwidth reserved for temporary traffic peaks
+  - _RHO_TOLERANCE_ represents the percentage of bandwidth reserved for temporary traffic peaks
 - network_scenario.py
   - _BANDWIDTH_ defines the available bandwidth between broker and subscribers  
 
