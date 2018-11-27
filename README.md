@@ -2,7 +2,7 @@
 
 FireDeX is a cross-layer middleware that facilitates timely and effective exchange of data for coordinating emergency response activities. Emergency scenarios may challenge/congest the network infrastructure. FireDeX addresses these situations by prioritizing event delivery and by dropping some low priority events. It adopts a publish-subscribe data exchange paradigm with brokers at the network edge to manage prioritized delivery of mission-critical data from IoT sources to relevant subscribers.
 
-See also the following resources for more details on FireDeX:
+See also the following resources for more details on the FireDeX middleware:
 - https://www.ics.uci.edu/~dsm/papers/2018/firedex-middleware.pdf
 - https://www.ics.uci.edu/~dsm/papers/2018/firedex-poster-abstract.pdf
 
@@ -17,7 +17,7 @@ Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 ## Installing - Alternative 1
 These steps will walk you trough the installation of the FireDeX project from scratch (clean Ubuntu Virtual Machine).  
 
-We will need to install:
+To install:
 - Java
 - Git
 - Mininet
@@ -77,7 +77,7 @@ Install [PyCharm](https://www.jetbrains.com/pycharm/) and [Eclipse](https://www.
 Finally you need to import the project dependencies (make sure that you are using Python 2.7).
 
 #### FireDeX static dependencies
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-static_ directory:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-static_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
@@ -89,7 +89,7 @@ Import the following dependencies:
 
 #### FireDeX dynamic dependencies
 
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-dynamic_ directory:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-dynamic_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
@@ -107,18 +107,20 @@ username = firedex
 password = firedex
 
 ## Running - FireDeX static
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the directory _firedex-static_:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-static_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
 
-The default configuration runs 10 subscribers with ρ = 1.5 (network load).
+The default configuration runs 10 subscribers with ρ = 1.5 (network load).  
+
+The following images show the performance of the system (response time and success rate) of the default configuration.
 
 ![Response time](https://github.com/boulouk/firedex/blob/master/documentation/static-response-time.png)
 
 ![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/static-success-rate.png)
 
-The configuration parameters are in the directory _scenario_ of the experimental-framework project:
+The configuration parameters are in the _scenario_ directory of the experimental-framework project:
 - experiment_scenario.py
   - _RUN_ defines the type of experiment to run (analytical model, Mininet simulation, both)
 - firedex_scenario.py
@@ -138,18 +140,20 @@ Note: run the applications in the following order:
 - experimental-framework
 
 ## Running - FireDeX dynamic
-Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects from the _firedex-dynamic_ directory:
+Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-dynamic_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
 
-The default configuration runs 5 subscribers with ρ = 1.2 (network load).
+The default configuration runs 5 subscribers with ρ = 1.2 (network load).  
+
+The following images show the performance experienced by subscriptions with different importance (high importance/priority vs. low importance/priority).
 
 ![High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
 
 ![Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
 
-The configuration parameters are in the directory _scenario_ of the experimental-framework project:
+The configuration parameters are in the _scenario_ directory of the experimental-framework project:
 - experiment_scenario.py
   - _EXPERIMENT_DURATION_ sets the duration of the experiment
   - _SUBSCRIBER_ allows to modify the number of subscribers and their subscriptions (topic and utility function)
