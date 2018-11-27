@@ -28,7 +28,7 @@ We will need to install:
 To install Java type the following commands on your terminal.
 
 ```
-sudo apt-get-repository ppa:webupd8team/java
+sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
@@ -45,26 +45,29 @@ To install Mininet type the following commands on your terminal.
 
 ```
 git clone git://github.com/mininet/mininet
-mininet/util/install.sh -nfv
+sudo mininet/util/install.sh -nfv
 ```
 
 ### OVS
 To install the modified version of OVS type the following commands on your terminal.
 
 ```
+sudo apt-get remove openvswitch-common openvswitch-datapath-dkms openvswitch-controller openvswitch-pki openvswitch-switch  
+
 sudo wget http://openvswitch.org/releases/openvswitch-2.1.0.tar.gz
 sudo tar zxfv openvswitch-2.1.0.tar.gz
 cd openvswitch-2.1.0/
-sudo apt-get install build-essential fakeroot
-sudo apt-get install debhelper autoconf automake libssl-dev pkg-config bzip2 openssl python-all procps python-qt4 python-zopeinterface python-twisted-conch dh-autoreconf
 ```
 
 Follow the instructions [here](https://github.com/saeenali/openvswitch/wiki/Stochastic-Switching-using-Open-vSwitch-in-Mininet) to modify the standard version of OVS and then type the following commands on your terminal.
 
 ```
-`DEB_BUILD_OPTIONS='parallel=8 nocheck' sudo fakeroot debian/rules binary`
+sudo apt-get install build-essential fakeroot
+sudo apt-get install debhelper autoconf automake libssl-dev pkg-config bzip2 openssl python-all procps python-qt4 python-zopeinterface python-twisted-conch dh-autoreconf  
+
+`DEB_BUILD_OPTIONS='parallel=8 nocheck' fakeroot debian/rules binary`
 cd ..
-sudo dpkg -i openvswitch-common*.deb openvswitch-datapath-dkms*.deb openvswitch-pki*.deb openvswitch-switch*.deb
+sudo dpkg -i openvswitch-common*.deb openvswitch-pki*.deb openvswitch-switch*.deb
 ```
 
 ### PyCharm and Eclipse
