@@ -12,7 +12,15 @@ These instructions will get you a copy of the FireDeX project up and running on 
 Install [VirtualBox](https://www.virtualbox.org/).  
 Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 
-## Installing - Alternative 1
+## Installing - Option 1 (easy, recommended)
+Download the FireDeX repository and the [FireDeX Virtual Machine](xxx). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
+
+Note:  
+username = firedex  
+password = firedex
+
+
+## Installing - Option 2 (advanced, from source)
 These steps will walk you trough the installation of the FireDeX project from scratch (clean Ubuntu Virtual Machine).  
 
 To install:
@@ -71,6 +79,9 @@ sudo dpkg -i openvswitch-common*.deb openvswitch-pki*.deb openvswitch-switch*.de
 ### PyCharm and Eclipse
 Install [PyCharm](https://www.jetbrains.com/pycharm/) and [Eclipse](https://www.eclipse.org/).
 
+### Get the source code
+git clone git://github.com/boulouk/firedex
+
 ### Finishing up
 Finally you need to import the project dependencies (make sure that you are using Python 2.7).
 
@@ -96,13 +107,6 @@ Import the following dependencies:
 - experimental-framework -> numpy, requests (add the Mininet project as a dependency)
 - sdn-controller -> ryu, decorator (mark the _application_ directory as _Sources Root_, add the NetworkX project as a dependency)
 - firedex-coordinator-service -> flask, numpy, cvxpy, requests
-
-## Installing - Alternative 2
-Download the FireDeX repository and the [FireDeX Virtual Machine](xxx). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
-
-Note:  
-username = firedex  
-password = firedex
 
 ## Running - FireDeX static
 Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-static_ directory:
