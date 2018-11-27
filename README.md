@@ -144,8 +144,8 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 
 The default configuration runs 5 subscribers with ρ = 1.2 (network load).
 
-![High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
-![Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
+[High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
+[Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
 
 The configuration parameters are in the directory _scenario_ of the experimental-framework project:
 - experiment_scenario.py
