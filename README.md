@@ -12,7 +12,7 @@ These instructions will get you a copy of the FireDeX project up and running on 
 ## Prerequisites
 
 Install [VirtualBox](https://www.virtualbox.org/).  
-Install Ubuntu 14.04.
+Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 
 ## Installing - Alternative 1
 These steps will walk you trough the installation of the FireDeX project from scratch (clean Ubuntu Virtual Machine).  
