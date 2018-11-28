@@ -2,7 +2,7 @@
 
 FireDeX is a cross-layer middleware that facilitates timely and effective exchange of data for coordinating emergency response activities. Emergency scenarios may challenge/congest the network infrastructure. FireDeX addresses these situations by prioritizing event delivery and by dropping some low priority events. It adopts a publish-subscribe data exchange paradigm with brokers at the network edge to manage prioritized delivery of mission-critical data from IoT sources to relevant subscribers.
 
-See [1,2] for more details on the FireDeX middleware.
+See [1, 2] for more details on the FireDeX middleware.
 
 ## Getting started
 These instructions will get you a copy of the FireDeX project up and running on your local machine. 
@@ -13,12 +13,11 @@ Install [VirtualBox](https://www.virtualbox.org/).
 Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 
 ## Installing - Option 1 (easy, recommended)
-Download the FireDeX repository and the [FireDeX Virtual Machine](xxx). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
+Download the FireDeX repository and the [FireDeX Virtual Machine](https://drive.google.com/open?id=13HCe2FB2J-KxWhJDb8zuDfxpH3_lhk9U). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
 
 Note:  
 username = firedex  
 password = firedex
-
 
 ## Installing - Option 2 (advanced, from source)
 These steps will walk you trough the installation of the FireDeX project from scratch (clean Ubuntu Virtual Machine).  
