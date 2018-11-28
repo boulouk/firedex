@@ -13,7 +13,7 @@ Install [VirtualBox](https://www.virtualbox.org/).
 Install [Ubuntu 14.04](http://releases.ubuntu.com/14.04/).
 
 ## Installing - Option 1 (easy, recommended)
-Download the FireDeX repository and the [FireDeX Virtual Machine](https://drive.google.com/open?id=13HCe2FB2J-KxWhJDb8zuDfxpH3_lhk9U). Then, import the FireDeX.vbox file in VirtualBox and launch the Virtual Machine.
+Download the [FireDeX Virtual Machine](https://drive.google.com/open?id=13HCe2FB2J-KxWhJDb8zuDfxpH3_lhk9U). Then, import the FireDeX.ova file in VirtualBox and launch the Virtual Machine.
 
 Note:  
 username = firedex  
@@ -79,7 +79,11 @@ sudo dpkg -i openvswitch-common*.deb openvswitch-pki*.deb openvswitch-switch*.de
 Install [PyCharm](https://www.jetbrains.com/pycharm/) and [Eclipse](https://www.eclipse.org/).
 
 ### Get the source code
+Download the FireDeX repository.
+
+```
 git clone git://github.com/boulouk/firedex
+```
 
 ### Finishing up
 Finally you need to import the project dependencies (make sure that you are using Python 2.7).
@@ -171,6 +175,7 @@ Note: run the applications in the following order:
 - sdn-controller
 - experimental-framework
 
+## References
 
-[1] https://hal.inria.fr/hal-01877555
+[1] https://hal.inria.fr/hal-01877555  
 [2] https://hal.inria.fr/hal-01895274
