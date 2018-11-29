@@ -28,6 +28,7 @@ To install:
 - Mininet
 - Modified version of OVS
 - PyCharm and Eclipse
+- Get the FireDeX source code
 
 ### Java
 To install Java type the following commands on your terminal.
@@ -70,7 +71,7 @@ sudo tar zxfv openvswitch-2.1.0.tar.gz
 cd openvswitch-2.1.0/
 ```
 
-- make minimal changes to OVS_HOME/ofproto/ofproto-dpif-xlate.c as follows [3]:
+- make minimal changes to `OVS_HOME/ofproto/ofproto-dpif-xlate.c` as follows [3]:
   - add headers
   ```
   #include <stdlib.h>
@@ -151,7 +152,7 @@ sudo dpkg -i openvswitch-common*.deb openvswitch-pki*.deb openvswitch-switch*.de
 ### PyCharm and Eclipse
 Install [PyCharm](https://www.jetbrains.com/pycharm/) and [Eclipse](https://www.eclipse.org/).
 
-### Get the source code
+### Get the FireDeX source code
 Download the FireDeX repository.
 
 ```
