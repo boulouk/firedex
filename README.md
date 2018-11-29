@@ -54,23 +54,96 @@ sudo mininet/util/install.sh -nfv
 ```
 
 ### OVS
-To install the modified version of OVS type the following commands on your terminal.
+To install the modified version of OVS take the following steps: 
+
+- remove the OVS version installed with Mininet
 
 ```
-sudo apt-get remove openvswitch-common openvswitch-datapath-dkms openvswitch-controller openvswitch-pki openvswitch-switch  
+sudo apt-get remove openvswitch-common openvswitch-datapath-dkms openvswitch-controller openvswitch-pki openvswitch-switch
+```
 
+- download the new OVS version
+
+```
 sudo wget http://openvswitch.org/releases/openvswitch-2.1.0.tar.gz
 sudo tar zxfv openvswitch-2.1.0.tar.gz
 cd openvswitch-2.1.0/
 ```
 
-Follow the instructions [here](https://github.com/saeenali/openvswitch/wiki/Stochastic-Switching-using-Open-vSwitch-in-Mininet) to modify the standard version of OVS and then type the following commands on your terminal.
+- make minimal changes to OVS_HOME/ofproto/ofproto-dpif-xlate.c as follows [3]:
+  - add headers
+  ```
+  #include <stdlib.h>
+  #include <time.h>
+  ```
+  - add global variable
+  ```
+  static bool is_srand_initialized = false;
+  ```
+  - modify functions
+  ```
+  static void
+  xlate_select_group(struct xlate_ctx *ctx, struct group_dpif *group)
+  {
+      struct flow_wildcards *wc = &ctx->xout->wc;
+      const struct ofputil_bucket *bucket;
+      uint32_t basis;
+
+      // The following tells the caching code that every packet in
+      // the flow in question must go to the userspace "slow path".
+      ctx->xout->slow |= SLOW_CONTROLLER;
+
+      basis = hash_bytes(ctx->xin->flow.dl_dst, sizeof ctx->xin->flow.dl_dst, 0);
+      bucket = group_best_live_bucket(ctx, group, basis);
+      if (bucket) {
+          memset(&wc->masks.dl_dst, 0xff, sizeof wc->masks.dl_dst);
+          xlate_group_bucket(ctx, bucket);
+      }
+  }
+
+  static const struct ofputil_bucket *
+  group_best_live_bucket(const struct xlate_ctx *ctx,
+                     const struct group_dpif *group,
+                     uint32_t basis) // basis in not being used
+  {
+      uint32_t rand_num = 0, sum = 0;
+      const struct ofputil_bucket *bucket = NULL;
+      const struct list *buckets;
+
+      // initialize random seed once
+      if (!is_srand_initialized) {
+          srand(time(NULL));
+          is_srand_initialized = true;
+      }
+
+      // generate a random number in [1, 100]
+      rand_num = (rand() % 100) + 1;
+
+      group_dpif_get_buckets(group, &buckets);
+      LIST_FOR_EACH (bucket, list_node, buckets) {
+          if (bucket_is_alive(ctx, bucket, 0)) {
+              sum += bucket->weight;
+              if (rand_num <= sum) {
+                  return bucket; // return this bucket
+              }
+          }
+      }
+
+      return bucket; // return NULL
+  }
+  ```
+  
+- compile the OVS source code
 
 ```
 sudo apt-get install build-essential fakeroot
-sudo apt-get install debhelper autoconf automake libssl-dev pkg-config bzip2 openssl python-all procps python-qt4 python-zopeinterface python-twisted-conch dh-autoreconf  
-
+sudo apt-get install debhelper autoconf automake libssl-dev pkg-config bzip2 openssl python-all procps python-qt4 python-zopeinterface python-twisted-conch dh-autoreconf
 `DEB_BUILD_OPTIONS='parallel=8 nocheck' fakeroot debian/rules binary`
+```
+
+- install OVS
+
+```
 cd ..
 sudo dpkg -i openvswitch-common*.deb openvswitch-pki*.deb openvswitch-switch*.deb
 ```
@@ -117,14 +190,6 @@ Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the fo
 - sdn-controller
 - firedex-coordinator-service
 
-The default configuration runs 10 subscribers with ρ = 1.5 (network load).  
-
-The following images show the performance of the system (response time and success rate) of the default configuration.
-
-![Response time](https://github.com/boulouk/firedex/blob/master/documentation/static-response-time.png)
-
-![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/static-success-rate.png)
-
 The configuration parameters are in the _scenario_ directory of the experimental-framework project:
 - experiment_scenario.py
   - _RUN_ defines the type of experiment to run (analytical model, Mininet simulation, both)
@@ -140,23 +205,23 @@ The configuration parameters are in the _scenario_ directory of the experimental
   - _PUBLISHER_ allows to modify the number of publishers and their publications (topic, publication rate and message size)
 
 Note: run the applications in the following order:
-- firedex-coordinator-service
-- sdn-controller
-- experimental-framework
+- firedex-coordinator-service (file to run: firedex_middleware.py)
+- sdn-controller (file to run: sdn_controller.py)
+- experimental-framework (file to run: experimental_framework.py - to plot the results: analysis_framework.py)
+
+The default configuration runs 10 subscribers with ρ = 1.5 (network load).  
+
+The following images show the performance of the system (response time and success rate) of the default configuration.
+
+![Response time](https://github.com/boulouk/firedex/blob/master/documentation/static-response-time.png)
+
+![Success rate](https://github.com/boulouk/firedex/blob/master/documentation/static-success-rate.png)
 
 ## Running - FireDeX dynamic
 Run PyCharm (file _PY_CHARM_HOME/bin/pycharm.sh_) as root (sudo) and open the following projects in the _firedex-dynamic_ directory:
 - experimental-framework
 - sdn-controller
 - firedex-coordinator-service
-
-The default configuration runs 5 subscribers with ρ = 1.2 (network load).  
-
-The following images show the performance experienced by subscriptions with different importance (high importance/priority vs. low importance/priority).
-
-![High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
-
-![Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
 
 The configuration parameters are in the _scenario_ directory of the experimental-framework project:
 - experiment_scenario.py
@@ -171,11 +236,20 @@ The configuration parameters are in the _scenario_ directory of the experimental
   - _BANDWIDTH_ defines the available bandwidth between broker and subscribers  
 
 Note: run the applications in the following order:
-- firedex-coordinator-service
-- sdn-controller
-- experimental-framework
+- firedex-coordinator-service (file to run: firedex_middleware.py)
+- sdn-controller (file to run: sdn_controller.py)
+- experimental-framework (file to run: experimental_framework.py - to plot the results use the dashboard)
+
+The default configuration runs 5 subscribers with ρ = 1.2 (network load).  
+
+The following images show the performance experienced by subscriptions with different importance (high importance/priority vs. low importance/priority).
+
+![High priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-high-priority.png)
+
+![Low priority subscription](https://github.com/boulouk/firedex/blob/master/documentation/dashboard-low-priority.png)
 
 ## References
 
 [1] https://hal.inria.fr/hal-01877555  
-[2] https://hal.inria.fr/hal-01895274
+[2] https://hal.inria.fr/hal-01895274  
+[3] https://github.com/saeenali/openvswitch/wiki/Stochastic-Switching-using-Open-vSwitch-in-Mininet
