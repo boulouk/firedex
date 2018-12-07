@@ -3,9 +3,12 @@ var server = "10.0.0.6"; // 10.0.0.x
 var port = 5000;
 var webSocket;
 
+var subscriptions = [];
+
 $(document).ready(
 	function() {
     connectToSubscriber();
+		// simulateMessages();
     timeSeries();
 	}
 );
@@ -55,6 +58,7 @@ var subscribe = function(topic, utilityFunction) {
 	request.content = strContent;
 	var strMessage = JSON.stringify(request);
 	webSocket.send(strMessage);
+	subscriptions.push(topic);
 	var html = "<tr>"
 		+ "<td class='topicColumn'>" + topic + "</td>"
 		+ "<td class='utilityFunctionColumn'>" + utilityFunction + "</td>"
@@ -81,6 +85,7 @@ var unsubscribe = function(topic, priority) {
 	request.content = strContent;
 	var strMessage = JSON.stringify(request);
 	webSocket.send(strMessage);
+	subscriptions = subscriptions.filter(subscription => subscription != topic);
 }
 
 var disconnectFromSubscriber = function() {
@@ -89,75 +94,156 @@ var disconnectFromSubscriber = function() {
 
 var handleMessage = function(strMessage) {
 	var object = JSON.parse(strMessage);
+	var topic = object.topic;
 	var latency = object.latency;
-	sumLatency += latency;
-  count = count + 1;
-	console.log(latency);
+
+	if ( !mapCurrentLatency.has(topic) )
+		mapCurrentLatency.set(topic, 0);
+
+	if ( !mapCurrentMessages.has(topic) )
+		mapCurrentMessages.set(topic, 0);
+
+	var currentLatency = mapCurrentLatency.get(topic);
+	var currentMessages = mapCurrentMessages.get(topic);
+
+	mapCurrentLatency.set(topic, currentLatency + latency);
+	mapCurrentMessages.set(topic, currentMessages + 1);
+}
+
+var simulateMessages = function() {
+	simulateTemperature();
+	simulateSmoke();
+	simulateWater();
+}
+
+var simulateTemperature = function() {
+	var message = new Object();
+	message.latency = 30;
+	message.topic = "temperature"
+	var strMessage = JSON.stringify(message);
+	handleMessage(strMessage);
+
+	setTimeout( function() { simulateTemperature(); }, 300);
+}
+
+var simulateSmoke = function() {
+	var message = new Object();
+	message.latency = 20;
+	message.topic = "smoke"
+	var strMessage = JSON.stringify(message);
+	handleMessage(strMessage);
+
+	setTimeout( function() { simulateSmoke(); }, 200);
+}
+
+var simulateWater = function() {
+	var message = new Object();
+	message.latency = 20;
+	message.topic = "water"
+	var strMessage = JSON.stringify(message);
+	handleMessage(strMessage);
+
+	setTimeout( function() { simulateWater(); }, 200);
 }
 
 var intervals = 20;
 var interval = 3000;
 
 var labels = [];
+var colors = ["blue", "red", "green", "yellow", "orange", "purple", "brown"];
 
-var sumLatencies = [];
-var messages = [];
-var sumLatency = 0;
-var count = 0;
+var mapCurrentLatency = new Map();
+var mapCurrentMessages = new Map();
+
+var mapLatencies = new Map();
+var mapMessages = new Map();
 
 function timeSeries() {
   for ( var i = 1; i < (intervals + 1); i++ ) {
     labels.push(i);
-
-		sumLatencies.push(0);
-    messages.push(0);
   }
 
   analyze();
 }
 
 function analyze() {
-	for ( var i = 1; i < intervals; i++ )
-		sumLatencies[i - 1] = sumLatencies[i];
-	sumLatencies[intervals - 1] = sumLatency;
+	for ( const [topic, currentLatency] of mapCurrentLatency.entries() ) {
+		var existsTopic = mapLatencies.has(topic);
+		if ( !existsTopic ) {
+			var topicLatencies = [];
+			for ( var i = 1; i < (intervals + 1); i++ ) {
+		    topicLatencies.push(0);
+		  }
+			mapLatencies.set(topic, topicLatencies);
+		}
 
-  for ( var i = 1; i < intervals; i++ )
-    messages[i - 1] = messages[i];
-  messages[intervals - 1] = count;
+		var topicLatencies = mapLatencies.get(topic);
+		for ( var i = 1; i < intervals; i++ )
+			topicLatencies[i - 1] = topicLatencies[i];
+		topicLatencies[intervals - 1] = currentLatency;
+	}
 
-	averageLatency = 0;
-	totalMessages = 0;
+	for ( const [topic, currentLatency] of mapCurrentMessages.entries() ) {
+		var existsTopic = mapMessages.has(topic);
+		if ( !existsTopic ) {
+			var topicLatencies = [];
+			for ( var i = 1; i < (intervals + 1); i++ ) {
+		    topicLatencies.push(0);
+		  }
+			mapMessages.set(topic, topicLatencies);
+		}
 
-  averageMessages = 0;
+		var topicLatencies = mapMessages.get(topic);
+		for ( var i = 1; i < intervals; i++ )
+			topicLatencies[i - 1] = topicLatencies[i];
+		topicLatencies[intervals - 1] = currentLatency;
+	}
 
-  maximumMessages = -1;
+	for ( const topic of mapLatencies.keys() ) // same for mapMessages
+		if ( subscriptions.indexOf(topic) == -1 ) {
+			mapLatencies.delete(topic);
+			mapMessages.delete(topic);
+		}
 
-  for ( var i = 0; i < intervals; i++ ) {
-		currentSumLatency = sumLatencies[i];
-		currentMessages = messages[i]
+	datasets = [];
+	averageLatencyMessage = "";
+	averageMessagesMessage = "";
 
-		averageLatency += currentSumLatency;
-		totalMessages += currentMessages;
+	var index = 0;
 
-    averageMessages += currentMessages;
+	for ( const [topic, messages] of mapMessages.entries() ) {
+		var sumMessages = 0;
+		for ( const currentMessages of messages )
+			sumMessages += currentMessages;
+		var averageMessages = sumMessages / intervals;
 
-    if ( currentMessages > maximumMessages )
-      maximumMessages = currentMessages;
-  }
+		var topicLatencies = mapLatencies.get(topic);
 
-	if ( totalMessages != 0 )
-		averageLatency /= totalMessages;
+		var averageLatency = 0;
+		for ( const topicLatency of topicLatencies )
+			averageLatency += topicLatency;
 
-	if ( intervals != 0 )
-  	averageMessages /= intervals;
+		if ( sumMessages != 0 )
+			averageLatency /= sumMessages;
 
-	$("#averageLatency").text("Average latency: " + Number(averageLatency).toFixed(2))
-  $("#averageMessages").text("Average messages: " + Number(averageMessages).toFixed(2));
-  $("#maximumMessages").text("Maximum messages: " + maximumMessages);
-  drawChart(labels, messages);
+		averageLatency = Number(averageLatency).toFixed(2);
+		averageMessages = Number(averageMessages).toFixed(2);
 
-	sumLatency = 0;
-  count = 0;
+		var colorName = colors[index];
+		averageLatencyMessage += topic + " (" + colorName + ")" + ": " + averageLatency + ", ";
+		averageMessagesMessage += topic + " (" + colorName + ")" + ": " + averageMessages + ", ";
+		index++;
+
+		datasets.push(messages);
+	}
+
+	drawChart(labels, datasets);
+
+	$("#averageLatency").text("Average latency: [" + averageLatencyMessage + "]")
+	$("#averageMessages").text("Average messages: [" + averageMessagesMessage + "]");
+
+	mapCurrentLatency = new Map();
+	mapCurrentMessages = new Map();
 
   setTimeout( function() { analyze(); }, interval);
 }
