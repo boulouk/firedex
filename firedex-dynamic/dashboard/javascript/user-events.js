@@ -8,7 +8,7 @@ var subscriptions = [];
 $(document).ready(
 	function() {
     connectToSubscriber();
-		// simulateMessages();
+    // simulateMessages();
     timeSeries();
 	}
 );
@@ -103,6 +103,9 @@ var handleMessage = function(strMessage) {
 	if ( !mapCurrentMessages.has(topic) )
 		mapCurrentMessages.set(topic, 0);
 
+	if (topic == "topic3")
+		console.log("ricevuto");
+
 	var currentLatency = mapCurrentLatency.get(topic);
 	var currentMessages = mapCurrentMessages.get(topic);
 
@@ -146,8 +149,8 @@ var simulateWater = function() {
 	setTimeout( function() { simulateWater(); }, 200);
 }
 
-var intervals = 20;
-var interval = 3000;
+var intervals = 60;
+var interval = 1000;
 
 var labels = [];
 var colors = ["blue", "red", "green", "yellow", "orange", "purple", "brown"];
@@ -159,9 +162,8 @@ var mapLatencies = new Map();
 var mapMessages = new Map();
 
 function timeSeries() {
-  for ( var i = 1; i < (intervals + 1); i++ ) {
+  for ( var i = 1; i < (intervals + 1); i++ )
     labels.push(i);
-  }
 
   analyze();
 }

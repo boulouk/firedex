@@ -10,9 +10,9 @@ $(document).ready(function() {
   Chart.defaults.global.animation.duration = 0;
 
   chart = new Chart(context, {
-    type: 'bar',
+    type: 'line',
     data: {
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      labels: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
       datasets: []
     },
     options: {
@@ -23,13 +23,23 @@ $(document).ready(function() {
         xAxes: [{
           ticks: {
             beginAtZero: true,
-            stepSize: 1
+            stepSize: 5,
+            autoSkip: true,
+            maxTicksLimit: 15
+          },
+          scaleLabel: {
+            display: true,
+            labelString: "time (last 60 seconds)"
           }
         }],
         yAxes: [{
           ticks: {
             beginAtZero: true,
             stepSize: 5
+          },
+          scaleLabel: {
+            display: true,
+            labelString: "messages received"
           }
         }]
       }
@@ -47,6 +57,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Red",
@@ -56,6 +68,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Green",
@@ -65,6 +79,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Yellow",
@@ -74,6 +90,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Orange",
@@ -83,6 +101,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Purple",
@@ -92,6 +112,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   },
   {
     label: "Brown",
@@ -101,6 +123,8 @@ var allDatasets = [
       'black'
     ],
     borderWidth: 1,
+    lineTension: 0,
+    fill: false
   }
 ];
 

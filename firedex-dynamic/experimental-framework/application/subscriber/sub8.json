@@ -1,0 +1,60 @@
+{
+    "subscriber": {
+        "modifications": [], 
+        "subscriptions": [
+            {
+                "topic": "smoke", 
+                "time": 0.0, 
+                "utilityFunction": 9.419807427108577
+            }, 
+            {
+                "topic": "topic4", 
+                "time": 0.0, 
+                "utilityFunction": 10
+            }, 
+            {
+                "topic": "topic3", 
+                "time": 0.0, 
+                "utilityFunction": 5
+            }, 
+            {
+                "topic": "water_pressure", 
+                "time": 0.0, 
+                "utilityFunction": 10
+            }, 
+            {
+                "topic": "topic2", 
+                "time": 0.0, 
+                "utilityFunction": 5
+            }, 
+            {
+                "topic": "topic1", 
+                "time": 0.0, 
+                "utilityFunction": 5.393145823169039
+            }
+        ], 
+        "startAfter": 0, 
+        "runningTime": 3780, 
+        "host": "10.0.0.9", 
+        "unsubscriptions": [], 
+        "identifier": "sub8"
+    }, 
+    "output": {
+        "outputFile": "./result/output/sub8_output.json", 
+        "logFile": "./result/log/sub8_log.log"
+    }, 
+    "server": {
+        "web": {
+            "abilitate": true, 
+            "port": 5000
+        }, 
+        "middleware": {
+            "host": "10.0.2.15", 
+            "port": "8888"
+        }, 
+        "broker": {
+            "host": "10.0.0.1", 
+            "port": 20000
+        }
+    }
+}

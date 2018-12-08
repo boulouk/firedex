@@ -9,7 +9,7 @@
                 "retained": false, 
                 "qualityOfService": 0, 
                 "rateType": "random", 
-                "topic": "topic5", 
+                "topic": "water_pressure", 
                 "messageSize": 51, 
                 "rate": 10
             }, 
@@ -17,7 +17,7 @@
                 "retained": false, 
                 "qualityOfService": 0, 
                 "rateType": "random", 
-                "topic": "topic4", 
+                "topic": "smoke", 
                 "messageSize": 51, 
                 "rate": 10
             }, 
@@ -41,7 +41,7 @@
                 "retained": false, 
                 "qualityOfService": 0, 
                 "rateType": "random", 
-                "topic": "topic6", 
+                "topic": "topic4", 
                 "messageSize": 51, 
                 "rate": 10
             }, 

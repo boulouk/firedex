@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="05c57878-c057-4de7-b762-8c20b3fa748f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../dashboard/javascript/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/javascript/chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/javascript/user-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/javascript/user-events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/gateway/log/mqttsn_gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/gateway/log/mqttsn_gateway.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/publisher/pub1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/publisher/pub1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/application/subscriber/sub4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/configuration/experiment_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/configuration/experiment_configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/pub1_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/pub1_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/sub1_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/sub1_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/sub2_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/sub2_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/sub3_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/sub3_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/sub4_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/sub4_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/result/log/sub5_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/result/log/sub5_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/scenario/experiment_scenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/scenario/experiment_scenario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experimental-framework/scenario/network_scenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/../experimental-framework/scenario/network_scenario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firedex-coordinator-service/algorithms/drop_rates/drop_rate_exponential.py" beforeDir="false" afterPath="$PROJECT_DIR$/../firedex-coordinator-service/algorithms/drop_rates/drop_rate_exponential.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firedex-coordinator-service/firedex_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/../firedex-coordinator-service/firedex_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/topology_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/topology_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/.coveragerc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/.mailmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/INSTALL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/appveyor/install.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/appveyor/run_with_env.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/gh-pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/gitwash_dumper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/make_examples_rst.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/make_gallery.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/rst_templates/autosummary/base.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/rst_templates/autosummary/class.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/rst_templates/autosummary/function.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/rst_templates/autosummary/module.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/bibliography.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/branch_dropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/configure_git.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/development_workflow.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/following_latest.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/forking_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/forking_hell.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/git_development.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/git_install.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/git_intro.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/git_links.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/git_resources.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/known_projects.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/links.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/maintainer_workflow.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/patching.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/pull_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/set_up_fork.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/gitwash/this_project.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/developer/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/download.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/install.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/overview.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.approximation.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.assortativity.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.bipartite.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.boundary.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.centrality.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.chains.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.chordal.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.clique.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.clustering.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.coloring.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.communicability_alg.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.community.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.component.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.connectivity.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.core.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.covering.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.cuts.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.cycles.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.dag.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.dispersion.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.distance_measures.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.distance_regular.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.dominance.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.dominating.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.efficiency.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.euler.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.flow.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.graphical.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.hierarchy.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.hybrid.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.isolates.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.isomorphism.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.isomorphism.vf2.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.link_analysis.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.link_prediction.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.matching.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.minors.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.mis.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.operators.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.reciprocity.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.rich_club.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.shortest_paths.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.simple_paths.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.swap.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.tournament.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.traversal.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.tree.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.triads.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.vitality.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.voronoi.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/algorithms.wiener.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_0.99.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.0.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.10.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.4.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.5.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.6.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.7.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.8.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_1.9.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/api_changes.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/citing.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/classes.digraph.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/classes.graph.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/classes.multidigraph.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/classes.multigraph.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/classes.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/convert.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/credits.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/drawing.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/exceptions.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/functions.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/generators.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/glossary.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/history.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/introduction.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/legal.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/linalg.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/migration_guide_from_1.x_to_2.0.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/news.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/pdf_reference.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.adjlist.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.edgelist.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.gexf.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.gml.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.gpickle.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.graphml.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.json_graph.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.leda.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.multiline_adjlist.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.nx_shp.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.pajek.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.sparsegraph6.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/readwrite.yaml.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/relabel.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/release_2.0.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/reference/utils.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/art1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/force/force.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/force/force.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/force/force.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/networkx.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/static/trac.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/templates/indexsidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/templates/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/test.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/tutorial/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/source/tutorial/tutorial.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/sphinxext/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/doc/sphinxext/customroles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/3d_drawing/mayavi2_spring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/advanced/eigenvalues.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/advanced/heavy_metal_umlaut.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/advanced/iterated_dynamical_systems.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/advanced/parallel_betweenness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/beam_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/blockmodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/davis_club.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/hartford_drug.edgelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/krackhardt_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/algorithms/rcm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/basic/properties.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/basic/read_write.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/atlas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/chess_masters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/chess_masters_WCC.pgn.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/circular_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/degree_histogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/degree_rank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/edge_colormap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/ego_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/four_grids.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/giant_component.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/house_with_colors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/knuth_miles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/knuth_miles.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/labels_and_colors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/lanl_routes.edgelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/lanl_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/node_colormap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/random_geometric_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/sampson.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/sampson_data.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/simple_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/unix_email.mbox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/unix_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/drawing/weighted_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/atlas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/atlas2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/degree_sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/erdos_renyi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/expected_degree_sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/football.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/karate_club.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/knuth_miles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/knuth_miles.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/napoleon_russian_campaign.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/roget.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/roget_dat.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/unix_email.mbox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/unix_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/words.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/graph/words_dat.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/javascript/force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/javascript/force/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/javascript/force/force.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/javascript/force/force.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/javascript/force/force.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/jit/rgraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/multigraph/chess_masters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/multigraph/chess_masters_WCC.pgn.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/pygraphviz/pygraphviz_attributes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/pygraphviz/pygraphviz_draw.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/pygraphviz/pygraphviz_simple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/pygraphviz/write_dotfile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/subclass/antigraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/examples/subclass/printgraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/fixcoverage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/clique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/clustering_coefficient.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/dominating_set.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/independent_set.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/kcomponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/ramsey.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/steinertree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_approx_clust_coeff.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_clique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_dominating_set.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_independent_set.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_kcomponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_ramsey.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_steinertree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/tests/test_vertex_cover.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/approximation/vertex_cover.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/correlation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/mixing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/neighbor_degree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/pairs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/base_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/test_connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/test_correlation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/test_mixing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/test_neighbor_degree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/assortativity/tests/test_pairs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/basic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/cluster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/covering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/edgelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/generators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/projection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/redundancy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/spectral.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_basic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_cluster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_covering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_edgelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_generators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_redundancy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/bipartite/tests/test_spectral_bipartivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/boundary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/betweenness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/betweenness_subset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/closeness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/current_flow_betweenness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/current_flow_betweenness_subset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/current_flow_closeness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/degree_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/dispersion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/eigenvector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/flow_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/harmonic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/katz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/load.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/reaching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/subgraph_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_betweenness_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_betweenness_centrality_subset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_closeness_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality_subset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_current_flow_closeness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_degree_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_dispersion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_eigenvector_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_harmonic_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_katz_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_load_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_reaching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/centrality/tests/test_subgraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/chains.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/chordal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/clique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/cluster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/coloring/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/coloring/greedy_coloring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/coloring/greedy_coloring_with_interchange.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/coloring/tests/test_coloring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/communicability_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/asyn_lpa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/community_generators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/community_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/kclique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/kernighan_lin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/quality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_asyn_lpa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_centrality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_generators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_kclique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_kernighan_lin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/community/tests/test_quality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/attracting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/biconnected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/semiconnected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/strongly_connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_attracting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_biconnected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_semiconnected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_strongly_connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_subgraph_copies.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/tests/test_weakly_connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/components/weakly_connected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/cuts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/kcomponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/kcutsets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/stoerwagner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/tests/test_connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/tests/test_cuts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/tests/test_kcomponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/tests/test_kcutsets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/tests/test_stoer_wagner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/connectivity/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/core.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/covering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/cuts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/cycles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/dag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/distance_measures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/distance_regular.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/dominance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/dominating.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/efficiency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/euler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/boykovkolmogorov.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/capacityscaling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/dinitz_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/edmondskarp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/maxflow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/mincost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/networksimplex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/preflowpush.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/shortestaugmentingpath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/gl1.gpickle.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/gw1.gpickle.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/netgen-2.gpickle.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/test_maxflow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/test_maxflow_large_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/test_mincost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/tests/wlm3.gpickle.bz2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/flow/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/graphical.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/hierarchy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/hybrid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isolate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/isomorph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/isomorphvf2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/matchhelpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/temporalisomorphvf2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/iso_r01_s80.A99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/iso_r01_s80.B99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/si2_b06_m200.A99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/si2_b06_m200.B99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/test_isomorphism.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/test_isomorphvf2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/test_match_helpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/test_temporalisomorphvf2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/tests/test_vf2userfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/isomorphism/vf2userfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_analysis/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_analysis/hits_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_analysis/pagerank_alg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_analysis/tests/test_hits.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_analysis/tests/test_pagerank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/link_prediction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/minors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/mis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/binary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/tests/test_all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/tests/test_binary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/tests/test_product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/tests/test_unary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/operators/unary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/reciprocity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/richclub.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/astar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/dense.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/generic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_astar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_dense.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_dense_numpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_generic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_unweighted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/tests/test_weighted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/unweighted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/shortest_paths/weighted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/simple_paths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/smetric.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/swap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_boundary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_chains.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_chordal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_clique.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_cluster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_communicability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_core.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_covering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_cuts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_cycles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_dag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_distance_measures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_distance_regular.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_dominance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_dominating.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_efficiency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_euler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_graphical.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_hierarchy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_hybrid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_isolate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_link_prediction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_minors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_mis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_reciprocity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_richclub.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_simple_paths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_smetric.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_swap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_threshold.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_tournament.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_triads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_vitality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_voronoi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tests/test_wiener.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/threshold.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tournament.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/beamsearch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/breadth_first_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/depth_first_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/edgedfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/tests/test_beamsearch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/tests/test_bfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/tests/test_dfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/traversal/tests/test_edgedfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/branchings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/mst.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/operations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/recognition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/tests/test_branchings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/tests/test_coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/tests/test_mst.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/tests/test_operations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/tree/tests/test_recognition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/triads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/vitality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/voronoi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/algorithms/wiener.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/digraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/multidigraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/multigraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/ordered.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/historical_tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_digraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_digraph_historical.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_graph_historical.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_multidigraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_multigraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_ordered.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_special.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/test_timing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/classes/tests/timingclasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/convert.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/convert_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/layout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/nx_agraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/nx_pydot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/nx_pylab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/tests/test_agraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/tests/test_layout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/tests/test_pydot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/drawing/tests/test_pylab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/exception.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/external/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/atlas.dat.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/atlas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/classic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/community.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/degree_seq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/directed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/duplication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/ego.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/expanders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/geometric.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/intersection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/joint_degree_seq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/line.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/nonisomorphic_trees.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/random_clustered.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/random_graphs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/small.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/social.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/stochastic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_atlas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_classic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_community.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_degree_seq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_directed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_duplication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_ego.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_expanders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_geometric.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_intersection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_joint_degree_seq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_line.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_nonisomorphic_trees.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_random_clustered.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_random_graphs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_small.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_stochastic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tests/test_triads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/generators/triads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/algebraicconnectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/attrmatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/graphmatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/laplacianmatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/modularitymatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/spectrum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/tests/test_algebraic_connectivity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/tests/test_graphmatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/tests/test_laplacian.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/tests/test_modularity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/linalg/tests/test_spectrum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/adjlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/edgelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/gexf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/gml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/gpickle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/graph6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/graphml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/adjacency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/jit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/node_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/tests/test_adjacency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/tests/test_jit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/tests/test_node_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/tests/test_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/json_graph/tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/leda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/multiline_adjlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/nx_shp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/nx_yaml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/p2g.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/pajek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/sparse6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_adjlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_edgelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_gexf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_gml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_gpickle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_graph6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_graphml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_leda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_p2g.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_pajek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_shp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_sparse6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/readwrite/tests/test_yaml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/relabel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/release.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/testing/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/testing/tests/test_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/testing/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/benchmark.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_convert.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_convert_numpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_convert_pandas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_convert_scipy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/tests/test_relabel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/contextmanagers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/decorators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/heaps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/misc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/random_sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/rcm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_contextmanager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_decorators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_heaps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_misc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_random_sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_rcm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/tests/test_unionfind.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/networkx/utils/union_find.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/networkx/setup.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdn_controller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manager/topology_manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="115" column="24" lean-forward="true" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/manager/topology_manager.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="264" />
+    <option name="y" value="47" />
+    <option name="width" value="1016" />
+    <option name="height" value="751" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sdn-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdn-controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../plugins/networkx" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="sdn_controller" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sdn-controller" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sdn_controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sdn_controller" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05c57878-c057-4de7-b762-8c20b3fa748f" name="Default Changelist" comment="" />
+      <created>1544196311958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544196311958</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1215" height="804" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293944" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sdn_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/topology_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="115" column="24" lean-forward="true" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

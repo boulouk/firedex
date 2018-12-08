@@ -43,7 +43,7 @@ class DropRateExponential:
             alpha = None
             for root in roots:
                 if numpy.isreal(root) and 0 < root <= 1:
-                    alpha = root
+                    alpha = abs(root)
 
             beta = 1 / alpha
 

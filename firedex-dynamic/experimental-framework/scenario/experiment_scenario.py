@@ -2,11 +2,11 @@
 HOST = "10.0.2.15"
 PORT = "8888"
 
-EXPERIMENT_DURATION = 3600
+EXPERIMENT_DURATION = 10800
 
 TOPIC = {
     "deterministic": 0,
-    "random": 6
+    "random": 4
 }
 
 SUBSCRIBER = {

@@ -17,7 +17,7 @@ class TopologyManager:
         }
 
         self.__graph.add_node(
-            node_for_adding = switch_identifier,
+            n = switch_identifier,
             description = description
         )
 
@@ -57,7 +57,7 @@ class TopologyManager:
         }
 
         self.__graph.add_node(
-            node_for_adding = host_identifier,
+            n = host_identifier,
             description = description
         )
 
@@ -104,8 +104,8 @@ class TopologyManager:
         }
 
         self.__graph.add_edge(
-            u_of_edge = node_from_identifier,
-            v_of_edge = node_to_identifier,
+            u = node_from_identifier,
+            v = node_to_identifier,
             description = description
         )
 

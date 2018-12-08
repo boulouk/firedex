@@ -37,6 +37,9 @@ class ExperimentConfiguration:
                 self.__topics[topic_type].append(topic_name)
                 topic_index = topic_index + 1
 
+        self.__topics["random"].append("smoke")
+        self.__topics["random"].append("water_pressure")
+
         subscriber_base_name = "sub"
         subscriber_index = 1
 

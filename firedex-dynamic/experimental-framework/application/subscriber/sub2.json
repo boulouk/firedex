@@ -3,34 +3,34 @@
         "modifications": [], 
         "subscriptions": [
             {
-                "topic": "topic3", 
-                "time": 0.0, 
-                "utilityFunction": 10
-            }, 
-            {
-                "topic": "topic2", 
-                "time": 0.0, 
-                "utilityFunction": 5
-            }, 
-            {
-                "topic": "topic6", 
-                "time": 0.0, 
-                "utilityFunction": 10
-            }, 
-            {
-                "topic": "topic5", 
-                "time": 0.0, 
-                "utilityFunction": 5
-            }, 
-            {
                 "topic": "topic1", 
                 "time": 0.0, 
-                "utilityFunction": 5
+                "utilityFunction": 8.278772537485633
             }, 
             {
                 "topic": "topic4", 
                 "time": 0.0, 
+                "utilityFunction": 10
+            }, 
+            {
+                "topic": "water_pressure", 
+                "time": 0.0, 
                 "utilityFunction": 5
+            }, 
+            {
+                "topic": "topic2", 
+                "time": 0.0, 
+                "utilityFunction": 8.104675809038945
+            }, 
+            {
+                "topic": "smoke", 
+                "time": 0.0, 
+                "utilityFunction": 9.770012395753234
+            }, 
+            {
+                "topic": "topic3", 
+                "time": 0.0, 
+                "utilityFunction": 7.197214255487451
             }
         ], 
         "startAfter": 0, 

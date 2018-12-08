@@ -517,10 +517,10 @@ def subscription_completion():
 
     drop_rate_algorithm = DropRateExponential()
     drop_rate_algorithm.apply(
-        network_configuration=configuration.network_configuration,
-        firedex_configuration=configuration.firedex_configuration,
-        publishers_configuration=configuration.publishers_configuration,
-        network_flows=network_flows
+        network_configuration = configuration.network_configuration,
+        firedex_configuration = configuration.firedex_configuration,
+        publishers_configuration = configuration.publishers_configuration,
+        network_flows = network_flows
     )
 
     controller_interface = ControllerInterface(
@@ -532,6 +532,9 @@ def subscription_completion():
     network_flows_by_not_subscriber = network_flow_collection.network_flows_by_not_subscriber(subscriber = subscriber)
     controller_interface.add_firedex_policies(network_flows = network_flows_by_subscriber)
     controller_interface.modify_firedex_policies(network_flows = network_flows_by_not_subscriber)
+
+    for network_flow in network_flows:
+        print( network_flow.host(), network_flow.port(), network_flow.get_priority(), network_flow.get_drop_rate() )
 
     transaction.lock.release()
 
