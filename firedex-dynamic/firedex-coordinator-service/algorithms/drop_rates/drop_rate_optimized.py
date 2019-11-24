@@ -16,10 +16,10 @@ class DropRateOptimized:
         # ---
 
         # problem to solve
-        alpha = [x.adjusted_utility_function() for x in network_flows]
+        alpha = [ x.adjusted_utility_function() for x in network_flows ]
         success_rate = cvxpy.Variable(n, name = "success_rates")
 
-        objective = cvxpy.Maximize(  cvxpy.sum( alpha * cvxpy.log1p(success_rate) )  )
+        objective = cvxpy.Maximize(  cvxpy.sum( cvxpy.multiply(alpha, cvxpy.log1p(success_rate)) )  )
         # ---
 
         # constraint
@@ -33,8 +33,9 @@ class DropRateOptimized:
 
             network_flows_load.append(current_load)
 
-        network_load = cvxpy.sum( network_flows_load * success_rate )
-        constraints = [ network_load <= bandwidth * (1 - rho_tolerance), 0 <= success_rate, success_rate <= 1 ]
+        a = network_flows_load * success_rate
+        network_load = cvxpy.sum( cvxpy.multiply(network_flows_load, success_rate) )
+        constraints = [ network_load <= bandwidth * (1 - rho_tolerance), success_rate >= 0, success_rate <= 1 ]
         # ---
 
         # solution

@@ -51,6 +51,7 @@ class DropRateExponential:
             network_flow_priority = network_flow.get_priority()
             network_flow_priority = network_flow_priority - 1
             network_flow_drop_rate = 1 - ( float(beta) ** (- network_flow_priority) )
+            network_flow_drop_rate = round(network_flow_drop_rate, 2)
             network_flow.set_drop_rate(drop_rate = network_flow_drop_rate)
 
     def __network_flows_by_priority(self, priorities, network_flows):

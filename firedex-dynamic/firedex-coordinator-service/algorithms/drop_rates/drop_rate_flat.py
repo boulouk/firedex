@@ -26,4 +26,6 @@ class DropRateFlat:
 
         for network_flow in network_flows:
             network_flow_drop_rate = beta
+            network_flow_drop_rate = round(network_flow_drop_rate, 2)
+
             network_flow.set_drop_rate(drop_rate = network_flow_drop_rate)

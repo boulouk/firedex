@@ -25,6 +25,9 @@ class DropRateLinear:
         if network_flows_load <= ( bandwidth * (1 - rho_tolerance) ):
             beta = 0
         else:
+            a = - bandwidth * (1 - rho_tolerance)
+            b = - bandwidth * (1 - rho_tolerance) + network_flows_load
+            c = b / network_flows_load_with_priority
             beta = (- bandwidth * (1 - rho_tolerance) + network_flows_load) / network_flows_load_with_priority
 
         for network_flow in network_flows:
@@ -32,6 +35,8 @@ class DropRateLinear:
             network_flow_priority = network_flow_priority - 1
 
             network_flow_drop_rate = beta * network_flow_priority
+            # network_flow_drop_rate = round(network_flow_drop_rate, 2)
+
             if network_flow_drop_rate > 1:
                 network_flow_drop_rate = 1
 
