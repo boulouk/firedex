@@ -245,7 +245,7 @@ The default configuration runs 5 subscribers with ρ = 1.2 (network load).
 
 The following images show the performance experienced by subscriptions with different importance (high importance/priority vs. low importance/priority).
 
-![Subscriptions](https://github.com/boulouk/firedex/blob/master/documentation/dashboard.png)
+![Subscriptions with different priorities](https://github.com/boulouk/firedex/blob/master/documentation/dashboard.png)
 
 ## References
 
